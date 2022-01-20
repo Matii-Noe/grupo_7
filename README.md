@@ -5,19 +5,22 @@ Proyecto integrador grupo 7 - Digital House
 
 ### Productos
 
-Se trata de un e-commerce dedicado a 
+Se trata de un e-commerce de agencia de viajes dentro de Argentina mediante paquetes completos y personalizados en base a los gustos del consumidor.
 
 ### Publico objetivo
 
-Familias
+El e-commerce está dirigido a todo tipo de publico ya sea parejas, familias, grupo de amigos o viaje en solitario, debido a su diversidad de destinos y actividades.
 
 ## Integrantes
 
-Martín, Matias Javier
-
+Martín, Matías Javier. Residente de San Nicolas de los Arroyos, estudiante de abogacía.
+Noe, Matías Enrique. Residente de San Nicolas de los Arroyos, estudiante de ingeniería electrónica.
+Fiorabanti, Priscila Nahir. Residente de San Nicolas de los Arroyos, estudiante del profesarado de educación primaria.
+Mantovani, Antonella Abril. Residente de San Nicolas de los Arroyos.
 
 ## Wireframes
 
+Boceto de las vistas, logo, colores y tipografía: https://www.figma.com/file/M3wwLx8g6PSwiZI3ULHZ8f/Wireframes?node-id=0%3A1
 
 ## Tecnologías utilizadas
 
@@ -27,14 +30,16 @@ CSS3
 
 ## Tableros de trabajo de cada sprint
 
-
+https://grupo7dh.atlassian.net/jira/software/projects/GRP7/boards/2
 
 ## Referentes
 
-https://www.patagoniatraveler.com/
+https://www.patagoniatraveler.com/ Nos parecio muy interesante el diseño y la practicidad del Home, por lo que nos inspiramos en èl.
 
-https://almundo.com.ar/
+https://almundo.com.ar/ Encontramos la interfaz más limpia y práctica frente a las otras páginas.
 
 https://www.despegar.com.ar/
 
-etc.
+https://www.booking.com/index.es-ar.html
+
+
