@@ -13,7 +13,7 @@ Familias
 
 ## Integrantes
 
-Martin, Matias Javier
+Martín, Matias Javier
 
 
 ## Wireframes
@@ -30,3 +30,11 @@ CSS3
 
 
 ## Referentes
+
+https://www.patagoniatraveler.com/
+
+https://almundo.com.ar/
+
+https://www.despegar.com.ar/
+
+etc.
