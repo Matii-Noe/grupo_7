@@ -1,22 +1,22 @@
-####Grupo_7
+#### Grupo_7
 
-##Descripcion del proyecto
+## Descripcion del proyecto
 
-#Productos
+# Productos
 
-#Publico objetivo
+# Publico objetivo
 
 
-##Integrantes
+## Integrantes
 
 Martin, Matias Javier
 
-##Wireframes
+## Wireframes
 
 
-##Tecnologías utilizadas
+## Tecnologías utilizadas
 
 
-##Tableros de trabajo de cada sprint
+## Tableros de trabajo de cada sprint
 
-##Referentes
+## Referentes
