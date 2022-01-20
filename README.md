@@ -1,4 +1,4 @@
-#### Grupo_7
+#### Grupo_7_40Trip
 
 ## Descripcion del proyecto
 
