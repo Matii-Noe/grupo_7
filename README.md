@@ -1,32 +1,32 @@
 # Grupo_7_40Trip
 Proyecto integrador grupo 7 - Digital House
 
-### Descripcion del proyecto
+## Descripcion del proyecto
 
-#### Productos
+### Productos
 
 Se trata de un e-commerce dedicado a 
 
-#### Publico objetivo
+### Publico objetivo
 
 Familias
 
-### Integrantes
+## Integrantes
 
 Martin, Matias Javier
 
 
-### Wireframes
+## Wireframes
 
 
-### Tecnologías utilizadas
+## Tecnologías utilizadas
 
 JS
 HTML
 CSS3
 
-### Tableros de trabajo de cada sprint
+## Tableros de trabajo de cada sprint
 
 
 
-### Referentes
+## Referentes
