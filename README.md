@@ -34,12 +34,14 @@ https://grupo7dh.atlassian.net/jira/software/projects/GRP7/boards/2
 
 ## Referentes
 
-https://www.patagoniatraveler.com/ Nos parecio muy interesante el diseño y la practicidad del Home, por lo que nos inspiramos en èl.
+https://www.patagoniatraveler.com/ Nos parecio muy interesante el diseño y la practicidad del Home, por lo que nos inspiramos en él.
 
 https://almundo.com.ar/ Encontramos la interfaz más limpia y práctica frente a las otras páginas.
 
-https://www.despegar.com.ar/
+https://www.despegar.com.ar/ Es un sitio web muy completo con un diseño "clásico" que nos pareció adecuado. 
 
-https://www.booking.com/index.es-ar.html
+https://www.booking.com/index.es-ar.html De este sitio, a pesar de ser similar a los otros, destacamos algunos detalles que nos parecieron interesantes, como ejemplo podríamos decir la tipografía que utilizan, o la gama de colores.
+
+https://www.kayak.com.ar/ Nos llamó la atención la ditribución de los elementos, contribuyó para orientarnos. 
 
 
