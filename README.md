@@ -14,8 +14,11 @@ El e-commerce está dirigido a todo tipo de publico ya sea parejas, familias, gr
 ## Integrantes
 
 Martín, Matías Javier. Residente de San Nicolas de los Arroyos, estudiante de abogacía.
+
 Noe, Matías Enrique. Residente de San Nicolas de los Arroyos, estudiante de ingeniería electrónica.
+
 Fiorabanti, Priscila Nahir. Residente de San Nicolas de los Arroyos, estudiante del profesarado de educación primaria.
+
 Mantovani, Antonella Abril. Residente de San Nicolas de los Arroyos.
 
 ## Wireframes
