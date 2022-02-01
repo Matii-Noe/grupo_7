@@ -1,0 +1,23 @@
+{
+  "name": "grupo_7",
+  "version": "1.0.0",
+  "description": "Proyecto integrador grupo 7 - Digital House",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matii-Noe/grupo_7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matii-Noe/grupo_7/issues"
+  },
+  "homepage": "https://github.com/Matii-Noe/grupo_7#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
