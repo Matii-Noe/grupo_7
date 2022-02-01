@@ -16,3 +16,4 @@ Reuniones virtuales por zoom donde trabajamos en equipo, consultandonos, permiti
 
 ## Dejar de hacer
 
+Hasta la fecha no hemos tenido actividades improductivas.
