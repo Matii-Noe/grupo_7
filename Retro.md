@@ -1,14 +1,14 @@
-# Comenzar a hacer
+## Comenzar a hacer
 
 
-# Hacer mas
+## Hacer mas
 
 
-# Continuar haciendo
+## Continuar haciendo
 
 Reuniones virtuales por zoom donde trabajamos en equipo, consultandonos, permitiendo agilizar las tareas del proyecto.
 
-# Hacer menos
+## Hacer menos
 
 
-# Dejar de hacer
+## Dejar de hacer
