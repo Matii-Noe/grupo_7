@@ -2,7 +2,7 @@
   "name": "grupo_7",
   "version": "1.0.0",
   "description": "Proyecto integrador grupo 7 - Digital House",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
