@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Color */
+    --azul: #0e3b43;
+    --celeste: #009fb7;
+    --rosado: #e4d6a7;
+    --grisclaro: #eaeaea;
+    /* Fon family */
+}
+
+/* Header */
+header {
+    background-color: var(--azul);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-header {
+    margin: 20px;
+}
+
+header .menu-principal {
+    margin: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+div img {
+    max-height: 5rem;
+    max-width: 10rem;
+}
+
+/* Main */
+main .titulo {
+    margin: 35px 25px;
+}
+
+main div section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main div section ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main div section ul li {
+    list-style-type:none;
+    margin: 5px 12%;
+    align-self: center;
+}
+
+main div .sec1 {
+    background-color: var(--grisclaro);
+    margin: 5% 10%;
+}
+
+main div .sec2 {
+    background-color: var(--grisclaro);
+    margin: 5% 10%;
+}
+
+main div .sec3 {
+    background-color: var(--grisclaro);
+    margin: 5% 10%;
+}
+
+/* Footer */
+footer div {
+    background-color: var(--azul);
+}
+
+footer .footer1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div .logo-footer {
+    order: 1;
+    margin: 20px;
+}
+
+footer div .siguenos-en {
+    color: white;
+}
+
+footer div a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .der-reservados {
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+footer .footer2 {
+    display: flex;
+    justify-content: center;
+}
+
+footer div .nav-bar {
+    margin: 10px;
+}
+
+footer div .nav-bar i {
+    color: white;
+    
+    margin-left: 1rem; 
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
