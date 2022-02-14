@@ -11,9 +11,8 @@
     --rosado: #e4d6a7;
     --grisclaro: #eaeaea;
     /* Font family */
-    --inter:'Inter', sans-serif;;
-    /* Font sizes */
-
+    --inter:'Inter', sans-serif;
+    --roboto: 'Roboto', sans-serif;
 }
 
 /* Header */
@@ -30,6 +29,7 @@ header .logo-header {
 
 header .menu-principal {
     margin: 20px;
+    font-family: var(--roboto);
 }
 
 header nav a {
@@ -91,6 +91,7 @@ footer div {
 footer .footer1 {
     display: flex;
     justify-content: space-between;
+    font-family: var(--roboto);
 }
 
 footer div .logo-footer {
@@ -115,6 +116,7 @@ footer .der-reservados {
 footer .footer2 {
     display: flex;
     justify-content: center;
+    font-family: var(--roboto);
 }
 
 footer div .nav-bar {
