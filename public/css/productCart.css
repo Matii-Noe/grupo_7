@@ -133,10 +133,22 @@ footer div .nav-bar i {
 }
 
 @media (max-width: 420px) {
-  
+
+    main div section ul h3 {    
+    font-size: 15px;
+    }
+
+    main div section ul p {    
+        font-size: 14px;
+        }
+
     footer .footer2 {
         padding: 0.5rem;
         font-size: 0.7rem;
+    }
+
+    main div section ul {
+        width: 60%;
     }
 
 } 
@@ -153,20 +165,20 @@ footer div .nav-bar i {
 
 } 
 
-@media (max-width: 768px) {
+
+    @media (max-width: 768px) {
 
     main div section {
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
     }
-    
 
     main div section ul {
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 33%;
+        width: 50%;
     }
 
     main div .sec1 {
@@ -174,6 +186,7 @@ footer div .nav-bar i {
         max-width: 400px;
         align-self: center;
         margin: auto;
+        margin-bottom: 2rem;
     }
     
     main div .sec2 {
@@ -181,6 +194,7 @@ footer div .nav-bar i {
         max-width: 400px;
         align-self: center;
         margin: auto;
+        margin-bottom: 2rem;
     }
     
     main div .sec3 {
