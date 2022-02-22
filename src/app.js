@@ -8,7 +8,8 @@ app.listen(3007, () => console.log('Servidor corriendo en puerto 3007'));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/index.html'))
 });
-app.get('/', (req, res) => {
+
+app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/register.html'))
 })
 
