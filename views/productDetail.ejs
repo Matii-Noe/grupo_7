@@ -1,44 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/productDetail.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous"/>
-    <title>40TRIP | Detalles del producto</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/productDetail.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous"/>
+        <title>40TRIP</title>
+    </head>
 </head>
 <body>
     <header>
-      <div class="top-header">
-          <picture class="logo">
-              <img src="/images/logo-blanco-40trip.svg" alt="El logo de 40TRIP">
-          </picture>
-          <div class="header-links">
-           <div class="contact">
-            <p><i class="fa-solid fa-phone"></i> VENTAS: 0800-111-2345</p>
-            <p> Lunes a Viernes de 9 a 22. Sabados, Domingos y Feriados de 10 a 18H</p>
-           </div>
-            <a href=""><i class="fa-regular fa-pen-to-square"></i> Reserva</a>
-            <a href=""><i class="fa-regular fa-user"></i> Ingresar</a>
-          </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="">Destinos <i class="fa-solid fa-angle-down"></i></a>
-                </li>
-                <li>
-                    <a href="">Estilos de viaje <i class="fa-solid fa-angle-down"></i></a>
-                </li>
-                <li>
-                    <a href="">Recomendados <i class="fa-solid fa-angle-down"></i></a>
-                </li>
-                <li>
-                    <a href="">Nosotros <i class="fa-solid fa-angle-down"></i></a>
-                </li>
-            </ul>
-        </nav>
-      </div>
+        <%- include('partials/header.ejs') %>
     </header>
     <main>
     <section>
@@ -118,6 +92,7 @@
     </section>
     </main>
     <footer>
+        <%- include('partials/footer.ejs') %>
 
     </footer>
 </body>

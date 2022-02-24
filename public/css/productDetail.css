@@ -351,3 +351,52 @@ p.tittle4{
     padding: 5px;
     margin-right: 15rem;
 }
+
+/* Footer */
+footer div {
+    background-color: var(--azul);
+}
+
+footer .footer1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--roboto);
+}
+
+footer div .logo-footer {
+    order: 1;
+    margin: 20px;
+}
+
+footer div .siguenos-en {
+    color: white;
+}
+
+footer div a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .der-reservados {
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+footer .footer2 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--roboto);
+}
+
+footer div .nav-bar {
+    margin: 10px;
+}
+
+footer div .nav-bar i {
+    color: white;
+    
+    margin-left: 1rem; 
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}

@@ -15,5 +15,9 @@ app.get('/register', (req, res) => {
 })
 
 app.get('/productCart', (req, res) => {
-    res.render('productCart.html')
+    res.render('productCart')
+});
+
+app.get('/productDetail', (req, res) => {
+    res.render('productDetail')
 });
