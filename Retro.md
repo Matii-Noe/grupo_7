@@ -1,19 +1,21 @@
+## Sprint 2
+
 ## Comenzar a hacer
 
-Agregar una reunión al final del sprint para asegurar de que todo este en ordeny funcione.
+Implementar una reunion por semana para informar sobre la situación de cada uno.
 
 ## Hacer mas
 
-Consultarnos via wsp las dudas que podamos tener.
+Llegar a un acuerdo para que todos los integrantes esten en la reunion.
 
 ## Continuar haciendo
 
-Reuniones virtuales por zoom donde trabajamos en equipo, consultandonos, permitiendo agilizar las tareas del proyecto.
+Consultar via wsp las dudas que podamos tener.
 
 ## Hacer menos
 
-
+Tiempo muerto en zoom. Tratar de tener las cosas listas para poder trabajar en grupo a la hora de las reuniones.
 
 ## Dejar de hacer
 
-Hasta la fecha no hemos tenido actividades improductivas.
+Faltar a las reuniones.
