@@ -1,26 +1,26 @@
-## Sprint 1
+# Sprint 1
 
-# Comenzar a hacer
+## Comenzar a hacer
 
+Agregar una reuinion al final del sprint para asegurar de que todo este en orden y funcione.
 
+## Hacer mas
 
-# Hacer mas
+Consultar via wsp las dudas que podamos tener.
 
+## Continuar haciendo
 
+Reuniones por zoom donde informamos la situacion de cada uno.
 
-# Continuar haciendo
-
-
-
-# Hacer menos
+## Hacer menos
 
 
 
 ## Dejar de hacer
 
+Hasta ahora no tuvimos actividades improductivas.
 
-
-## Sprint 2
+# Sprint 2
 
 ## Comenzar a hacer
 
