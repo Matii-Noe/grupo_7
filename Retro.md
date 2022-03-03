@@ -10,7 +10,7 @@ Consultar via wsp las dudas que podamos tener.
 
 ## Continuar haciendo
 
-Reuniones por zoom donde informamos la situacion de cada uno.
+Reuniones por zoom para organizar los trabajos.
 
 ## Hacer menos
 
