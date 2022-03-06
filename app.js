@@ -26,3 +26,7 @@ app.get('/productDetail', (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register')
 })
+
+app.get('/edit', (req, res) => {
+    res.render('edit')
+})
