@@ -8,31 +8,44 @@
     <link rel="stylesheet" href="/css/edit.css">
 </head>
 <body>
+    <header>
+
+        <div class="logo-header">
+            <img src="/images/logo-blanco-40trip.svg" alt="Logo de 40Trip">
+        </div>
+
+        <nav class="menu-principal">
+            <a href="#">Menú principal</a> 
+        </nav>
+
+    </header>
 
         <form action="post" id="edit">
 
             <h1>Edita tu producto</h1>
-            <div>
+            
+            <div class="img-product">
                 <img src="" alt="Imagen del producto">
             </div>
 
-            <div>
-                    <div class="grupo">
-                        <input type="text" name="" id="name" required><span class="barra"></span>
-                        <label for=""> Nombre </label>
-                    </div>
-                <div class="grupo">
-                    <input type="text" name="" id="name" required><span class="barra"></span>
-                    <label for=""> Precio </label>
-                </div>
-    
-                <div class="grupo">
-                    <input type="text" name="" id="name" required><span class="barra"></span>
-                    <label for=""> Descripcion </label>
-                </div>
+            <div class="input">
+
+                    
+                <label for=""> Nombre: </label> <br> <input type="text" name="" id="name" required> <br>
+
+                    
+                <label for=""> Precio: </label> <br> <input type="text" name="" id="name" required> <br>
+                    
+                    
+                <label for=""> Descripcion: </label> <br> <input class="descripcion" type="text" name="" id="name" required> <br>
+
+            </div>
+
+            <div class="buttons">
     
                 <button class="guardar" type="submit"> Guardar cambios</button>
                 <button class="borrar" type="reset"> Eliminar cambios</button>
+
             </div>
 
         </form>
