@@ -23,7 +23,7 @@ Mantovani, Antonella Abril. Residente de San Nicolas de los Arroyos.
 
 ## Wireframes
 
-Boceto de las vistas, logo, colores y tipografía: https://www.figma.com/file/M3wwLx8g6PSwiZI3ULHZ8f/Wireframes?node-id=0%3A1
+Boceto de las vistas, logo, colores y tipografía:https://www.figma.com/file/M3wwLx8g6PSwiZI3ULHZ8f/Wireframes?node-id=20%3A159
 
 ## Tecnologías utilizadas
 
