@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    /*colors*/
+    --azul-oscuro: #0E3B43;
+    --azul-claro: #009FB7;
+    --champagne: #E4D6A7;
+    --negro: #000000;
+    --blanco: #fff;
+    --gris-claro: #EAEAEA;
+}
+
+/*Estilos globales*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Header */
+header {
+    background-color: var(--azul-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-header {
+    margin: 20px;
+}
+
+header .menu-principal {
+    margin: 20px;
+    font-family: PT Sans Narrow;
+    color: var(--blanco);
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+div img {
+    max-height: 5rem;
+    max-width: 10rem;
+}
+
+/*FORM*/
+body{
+    background-color: var(--gris-claro);
+}
+
+h2{
+    font-family: Roboto;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+}
+
+.form-label {
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 10px 0;
+  }
+  
+  .form-input {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px var(--gris-claro);
+    padding: 0 15px;
+  }
+
+  .createbutton{
+        background-color: var(--azul-claro);
+        font-size: 2em;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 8px;
+        border: none;
+        width: 100%;
+  }

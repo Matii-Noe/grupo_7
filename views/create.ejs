@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', {title: 'Crear producto'}) %>
+    <link rel="stylesheet" href="/css/createProduct.css">
+</head>
+<body>
+    <header>
+        <%- include('partials/header.ejs') %>
+    </header>
+    <main>
+        <div>
+          <h2>Formulario de creación de productos</h2>
+        </div>
+        <div>
+            <form action="/create" method="POST" enctype="multipart/form-data">
+				<div>
+					<div>
+						<label for="name" class="form-label">Nombre del producto:</label>
+						<input type="text" id="name" name="name" class="form-input" required>
+					</div>
+					<div>
+						<label for="price" class="form-label">Precio del producto:</label>
+						<input type="text" id="price" name="price" class="form-input" required>
+					</div>
+					<div>
+						<label for="description" class="form-label">Descripción:</label>
+						<textarea name="description" id="description" class="form-input" required></textarea>
+					</div>
+                    <div>
+                        <label for="productimage" class="form-label">Carga la imagen de tu producto:</label>
+                        <input type="file" name="productimage" accept=".jpg" accept=".png" id="productimage" class="form-input">
+                    </div>
+                    <div>
+                        <button type="submit" class="createbutton">Crear producto</button>
+                    </div>
+                </div>
+				
+				
+			</form>
+        </div>
+    </main>   
+</body>
+</html>

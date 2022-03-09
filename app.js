@@ -30,3 +30,7 @@ app.get('/register', (req, res) => {
 app.get('/edit', (req, res) => {
     res.render('edit')
 })
+
+app.get('/create', (req, res) => {
+    res.render('create')
+})

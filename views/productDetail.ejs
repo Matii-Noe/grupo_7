@@ -2,17 +2,13 @@
 <html lang="en">
 <head>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%- include('partials/head', {title: 'Home'}) %>
         <link rel="stylesheet" href="/css/productDetail.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous"/>
-        <title>40TRIP</title>
     </head>
 </head>
 <body>
     <header>
-        <%- include('partials/header.ejs') %>
+        <%- include('partials/header-navbar.ejs') %>
     </header>
     <main>
     <section>
@@ -93,7 +89,6 @@
     </main>
     <footer>
         <%- include('partials/footer.ejs') %>
-
     </footer>
 </body>
 </html> 

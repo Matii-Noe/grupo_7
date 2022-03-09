@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    /*colors*/
+    --azul-oscuro: #0E3B43;
+    --azul-claro: #009FB7;
+    --champagne: #E4D6A7;
+    --negro: #000000;
+    --blanco: #fff;
+    --gris-claro: #EAEAEA;
+}
+
+/*Estilos globales*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/*Header*/
+
+header{
+    background-color: #0E3B43;
+}
+
+header .logo{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 50%;
+}
+
+header div{
+    font-family: PT Sans Narrow;
+    color: var(--blanco);
+}
+
+.top-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header p{
+    font-weight: bold;
+}
+
+.header-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3rem;
+}
+
+.contact{
+    text-align: center;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+}
+
+
+header div a{
+    font-family: PT Sans Narrow;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--blanco);
+    text-decoration: none;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+
+
+header nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 30%;
+    padding-bottom: 4rem;
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-family: PT Sans Narrow;
+    font-size: 2rem;
+    padding: 3rem;
+}
