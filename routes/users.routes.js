@@ -18,24 +18,12 @@ const path = require('path')
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
 
-/*** GET ALL PRODUCTS ***/ 
-router.get('/', usersController.index); 
-
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create/', usersController.create); 
-router.post('/', usersController.store); 
-
-
-/*** GET ONE PRODUCT ***/ 
-router.get('/:id/', usersController.detail); 
+router.get('/register/', usersController.register); 
+router.post('/', usersController.processRegister); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit',usersController.edit); 
-router.put('/:id', usersController.update); 
-
-
-/*** DELETE ONE PRODUCT ***/ 
-router.delete('/:id', usersController.destroy); 
-
+router.get('/:id/edit',usersController.login); 
+router.put('/:id', usersController.loginProcess); 
 
 module.exports = router;
