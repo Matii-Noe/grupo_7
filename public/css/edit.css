@@ -37,20 +37,15 @@ header nav a {
     text-decoration: none;
 }
 
-div img {
-    max-height: 5rem;
-    max-width: 10rem;
-}
-
-
 /* Form */
 form {
     background-color: var(--grisclaro);
     display: flex;
     padding: 2rem;
     flex-wrap: wrap;
-    height: 81vh;
+    height: 90vh;
     width: 100vw;
+    justify-content: center;
 }
 
 form h1 {
@@ -60,29 +55,35 @@ form h1 {
     width: 100vw;
 }
 
-form .img-product {
-    width: 40vw;
-}
-
-form img {
-    padding-right: 2rem;
-    margin-left: 10vw;
-}
-
 form .input {
-    justify-content: center;
-    width: 40vw;
+    width: 80vw;
+    height: 25vh;
+    text-align: center;
 }
 
 form .input input {
-    width: 80%;
-    margin: 0.3rem 3rem 0.5rem 0;
+    width: 40%;
+    margin: 1rem 3rem 1rem 3rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 5px;
     border: none;
+    text-align: start;
 }
 
-.input .descripcion {
-    height: 4rem;
+form .descripcion {
+    width: 75vw;
+    justify-content: center;
+    text-align: center;
+}
+
+form .descripcion input {
+    height: 6rem;
+    width: 80%;
+    margin: 1rem 0rem 1rem 0;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    border: none;
+    text-align: start;
 }
 
 button {
@@ -115,3 +116,13 @@ text-align: center;
     margin: 0 1rem 0 1rem;
     text-align: center;
     }
+
+@media (max-width: 1225px) {
+    form .input input {
+        width: 35%;
+    }
+
+    form .input {
+        text-align: center;
+    }
+}
