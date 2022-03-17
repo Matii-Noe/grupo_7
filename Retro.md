@@ -41,3 +41,26 @@ Tiempo muerto en zoom. Tratar de tener las cosas listas para poder trabajar en g
 ## Dejar de hacer
 
 Faltar a las reuniones.
+
+
+# Sprint 3
+
+## Comenzar a hacer
+
+Implementar una reunion de 15min máximo.
+
+## Hacer mas
+
+Consultar las dudas con nuestros compañeros de grupo/curso.
+
+## Continuar haciendo
+
+Hacer una reunión por semana.
+
+## Hacer menos
+
+Posponer algunas tareas.
+
+## Dejar de hacer
+
+Pasarnos del plazo de entrega que se nos asignó.
