@@ -28,10 +28,6 @@ const controller = {
 		res.redirect('processCreate');
 	},
 
-	
-
-	
-
 	productDetail: (req, res) => {
 		res.render('catalogue');
 	},

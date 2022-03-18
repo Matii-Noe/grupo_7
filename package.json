@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Proyecto integrador grupo 7 - Digital House",
   "main": "app.js",
-  "scripts": { 
-    "start": "nodemon bin/www",
+  "scripts": {
+    "start": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,13 +19,17 @@
   },
   "homepage": "https://github.com/Matii-Noe/grupo_7#readme",
   "dependencies": {
-    "cookie-parser": "^1.4.6",
-    "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "http-errors": "^2.0.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.1",
+    "http-errors": "~1.6.3",
     "method-override": "^3.0.0",
-    "morgan": "^1.10.0",
-    "multer": "^1.4.4",
-    "nodemon": "^2.0.15"
+    "morgan": "~1.9.1",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.12"
   }
 }
