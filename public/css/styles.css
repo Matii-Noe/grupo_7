@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 12px;
+}
+
+/* MAIN */
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+section {
+    margin-top: 20px;
+}
+
+.divContenedor {
+    display: flex;
+}
+
+article {
+    width: 25%;
+    padding : 10px 15px;
+}
+
+a {
+    position: relative
+}
+
+/* Banner el enemigo*/
+
+section div div article div.banner {
+    width: 100%;
+    height: 40px;
+    padding: 13px;
+    background: #15262f;
+    position: absolute;
+    bottom: 0px;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* MEDIA QUERIES */
+
+
+
+@media (max-width: 990px){
+    main {
+        width: 80%;
+    }
+    .divContenedor {
+        display: block;
+    }
+    article h3 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    p {
+        display: none;
+    }
+    
+    article {
+        width: 100%;
+    }
+
+    section div div article div.banner {
+        text-align: center;
+        height: 80px;
+        padding: 20px;
+        font-size: 40px;
+        background-color: rgba(0,0,0,.4);
+        bottom: 5px;
+    }
+};
+
+@media (max-widht: 500px) {
+    section div div article div.banner {
+        height: 34px;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
