@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Proyecto integrador grupo 7 - Digital House",
   "main": "app.js",
-  "scripts": { 
+  "scripts": {
     "start": "nodemon bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
