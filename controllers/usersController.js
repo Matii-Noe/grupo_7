@@ -1,18 +1,18 @@
 const controller = {
 	register: (req, res) => {
-		res.send('register');
+		res.render('register');
 	},
 
     processRegister: (req, res) => {
-		res.send('register');
+		res.render('register');
 	},
 
     login: (req, res) => {
-		res.send('login');
+		res.render('login');
 	},
 
     loginProcess: (req, res) => {
-		res.send('loginProcess');
+		res.render('index');
 	},
 };
 

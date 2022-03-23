@@ -29,12 +29,15 @@ const controller = {
 	},
 
 	productDetail: (req, res) => {
-		res.render('catalogue');
+		res.render('productDetail');
+	},
+	productCart: (req, res) => {
+		res.render('productCart')
 	},
 
 	destroy: (req, res) => {
 		res.render('catalogue');
-	},
+	}
 
 };
 

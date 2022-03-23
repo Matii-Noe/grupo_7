@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 /*const multer = require('multer')*/
-const path = require('path')
+const path = require('path');
 
 //Multer config
 /*var storage = multer.diskStorage({
@@ -18,12 +18,15 @@ const path = require('path')
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
 
+
+router.get('/login', usersController.login); 
+router.post('/', usersController.loginProcess); 
+
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/register/', usersController.register); 
+router.get('/register', usersController.register); 
 router.post('/', usersController.processRegister); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit',usersController.login); 
-router.put('/:id', usersController.loginProcess); 
+
 
 module.exports = router;
