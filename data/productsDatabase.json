@@ -3,10 +3,10 @@
         "id": 1,
         "productName":"Buenos Aires",
         "description":"En este tour disfrutaremos de Buenos Aires con sus bares, librerías, teatros y hermosos parques.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2":""
+        "images": {"bigImage":"bs-as-big.jpeg",
+        "mediumImage":"bs-as-medium.jpeg",
+        "littleImage1":"bs-as-little1.jpeg",
+        "litlleImage2":"bs-as-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
@@ -25,10 +25,10 @@
         "id": 2,
         "productName":"Puerto Iguazú",
         "description":"En este tour disfrutaremos del Puerto Iguazú en una recorrida por las Ruinas de San Ignacio con Minas de Wanda.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"iguazu-big.jpeg",
+        "mediumImage":"iguazu-medium.jpeg",
+        "littleImage1":"iguazu-little1.jpeg",
+        "litlleImage2":"iguazu-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "JetSMART",
@@ -45,10 +45,10 @@
         "id": 3,
         "productName":"Bariloche",
         "description":"Con este tour disrutará de San Carlos de Bariloche, uno de los atractivos turísticos más importantes para los amantes de la nieve, conocerá San Martín de los Andes y el lago Nahuel Huapi. Además disfrutará del característico chocolate de la ciudad.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"bariloche-big.jpeg",
+        "mediumImage":"bariloche-medium.jpeg",
+        "littleImage1":"bariloche-little1.jpeg",
+        "litlleImage2":"bariloche-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "Flybondi",
@@ -67,10 +67,10 @@
         "id": 4,
         "productName":"El Calafate",
         "description":"En este tour conocerá a la ciudad de Calafate, desde donde recorrerá y contemplará los increíbles paisajes patagónicos, y los glaciares de la región.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"calafate-big.jpeg",
+        "mediumImage":"calafate-medium.jpeg",
+        "littleImage1":"calafate-little1.jpeg",
+        "litlleImage2":"calafate-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
@@ -88,10 +88,10 @@
         "id": 5,
         "productName":"El Chaltén",
         "description":"Este tour se ha creado específicamente para todo aquel que quiera recorrer eficientemente la Capital Nacional del Trekking.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"chalten-big.jpeg",
+        "mediumImage":"chalten-medium.jpeg",
+        "littleImage1":"chalten-little1.jpeg",
+        "litlleImage2": "chalten-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
@@ -110,10 +110,10 @@
         "id": 6,
         "productName":"Ushuaia",
         "description":"En este tour visitará Ushuaia, recorrerá el canal Beagle, y conocerá el Glaciar Perito Moreno y el Parque Nacional Tierra del Fuego.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"ushuaia-big.jpeg",
+        "mediumImage":"ushuaia-medium.jpeg",
+        "littleImage1":"ushuaia-little1.jpeg",
+        "litlleImage2":"ushuaia-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "JetSMART",
@@ -132,10 +132,10 @@
         "id": 7,
         "productName":"Puerto Madryn",
         "description":"Un viaje ideal para conocer uno de los más importantes destinos de naturaleza de Argentina",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"puertoMadryn-big.jpeg",
+        "mediumImage":"puertoMadryn-medium.jpeg",
+        "littleImage1":"puertoMadryn-little1.jpeg",
+        "litlleImage2":"puertoMadryn-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
@@ -154,10 +154,10 @@
         "id": 8,
         "productName":"Torres del Paine",
         "description":"Tour de primera clase visitando los principales atractivos del Parque Nacional Torres del Paine.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"torresdelPaine-big.jpeg",
+        "mediumImage":"torresdelPaine-medium.jpeg",
+        "littleImage1":"torresdelPaine-little1.jpeg",
+        "litlleImage2":"torresdelPaine-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
@@ -176,10 +176,10 @@
         "id": 9,
         "productName":"Mendoza",
         "description":"En este maravilloso tour podrás disfrutar de la mejor aventura en Argentina por La Cordillera de los Andes en Mendoza: tirolesa, rafting, cabalgata y más.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"mendoza-big.jpeg",
+        "mediumImage":"mendoza-medium.jpeg",
+        "littleImage1":"mendoza-little1.jpeg",
+        "litlleImage2":"mendoza-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
@@ -198,10 +198,10 @@
         "id": 10,
         "productName":"Salta",
         "description":"La escapada ideal para conocer una Argentina mucho más profunda. Pueblos originarios y costumbres prehispánicas, paisajes de belleza impactante y la oportunidad de disfrutar la exquisita cocina regional.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"salta-big.jpeg",
+        "mediumImage":"salta-medium.jpeg",
+        "littleImage1":"salta-little1.jpeg",
+        "litlleImage2":"salta-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
@@ -220,10 +220,10 @@
         "id": 11,
         "productName":"Esteros del Iberá",
         "description":"Escapada a Esteros del Iberá en Puerto Valle. Fundado en 1868, Puerto Valle es un hotel boutique con servicio de lujo, situado en una región tiene acceso exclusivo a los Esteros del Iberá en la Laguna Valle.",
-        "images": {"bigImage":"",
-        "mediumImage":"",
-        "littleImage1":"",
-        "litlleImage2": ""
+        "images": {"bigImage":"esterosdelIbera-big.jpeg",
+        "mediumImage":"esterosdelIbera-medium.jpeg",
+        "littleImage1":"esterosdelIbera-little1.jpeg",
+        "litlleImage2":"esterosdelIbera-little2.jpeg"
         },
         "transport ": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
