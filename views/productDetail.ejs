@@ -14,15 +14,15 @@
     <section>
         <div class="conteiner">
          <div class="column1">
-          <img src="/images/iguazu-grande.jpg" alt="">
+          <img src="/images/<%= product.images.bigImage %>" alt="">
          </div>
          <div class="column2">
              <div class="row1">
-              <img src="/images/iguazu-mediana.jpg" alt="">
+              <img src="/images/<%= product.images.mediumImage%>" alt="">
              </div>
              <div class="row2">
-              <img src="/images/iguazu-chica1.jpg" alt="">
-              <img src="/images/iguazu-chica2.jpg" alt="">
+              <img src="/images/<%= product.images.littleImage1%>" alt="">
+              <img src="/images/<%= product.images.litlleImage2%>" alt="">
              </div>
          </div>
         </div>
@@ -31,7 +31,7 @@
         </div>
     </section>
     <section>
-        <h1>Puerto Iguazú</h1>
+        <h1><%= product.productName %></h1>
         <h3>Fechas y personas</h3>
         <article class="input date">
             <p><i class="fa-regular fa-calendar"></i> Desde xx/xx - Hasta xx/xx</p>
@@ -47,8 +47,8 @@
         </div>
         <article class="box1">
             <div class="input">
-             <p class="tittle"><i class="fa-solid fa-plane"></i> Vuelo</p>
-             <p class="subtittle">| Operado por Aerolíneas Argentinas</p>
+             <p class="tittle"><i class="fa-solid fa-plane"></i> <%= product.transport %> </p>
+             <p class="subtittle">| Operado por <%= product.operatedBy %></p>
             </div>
             <p class="top">Ida xx/xx</p>
              <a href="" class="button2">Ver detalles</a>
@@ -57,33 +57,34 @@
         <article class="box1">
             <div class="input">
              <p class="tittle"><i class="fa-solid fa-hotel"></i> Alojamiento</p>
-             <p class="subtittle">3 noches</p>
+             <p class="subtittle"> <%= product.nights %> noches </p>
             </div>
-             <p class="top">Hotel El Libertador</p>
+             <p class="top"><%= product.hotel %></p>
              <a href="" class="button2">Ver alojamiento</a>
-             <p class="bottom light">Habitación Doble Estándar con Balcón</p>
+             <p class="bottom light"><%= product.roomType %></p>
         </article>
         <article class="box1">
             <p class="tittle"><i class="fa-regular fa-map"></i>Actividad</p>
-            <p class="top">Ruinas de San Ignacio con Minas de Wanda</p>
+            <p class="top"><%= product.activities.activity1 %></p>
+            <p class="top"><%= product.activities.activity2 %></p>
+            <p class="top"><%= product.activities.activity3 %></p>
             <a href="" class="button2">Ver actividad</a>
-            <p class="bottom light">Duración: 12 hs</p>
-        
+    
         </article>
     </section>
     <section class="price">
         <div class="product">
-         <p>Puerto Iguazú</p>
+         <p><%= product.productName %></p>
         </div>
         <div class="vertical-line"></div>
         <div class="description">
          <p class="tittle1">Precio final por persona</p>
-         <p class="tittle2">$41.212</p>
+         <p class="tittle2">$<%= product.price %></p>
          <p class="tittle3">Final x personas $xx.xxx</p>
          <p class="tittle4">Incluye Imprto. PAIS y Percepción RG4815</p>
         </div>
         <div class="reserva">
-         <a href="">RESERVAR</a>
+         <a href="/views/productCart">RESERVAR</a>
         </div>
     </section>
     </main>

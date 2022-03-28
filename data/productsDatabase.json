@@ -8,7 +8,7 @@
         "littleImage1":"bs-as-little1.jpeg",
         "litlleImage2":"bs-as-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
         "hotel":"Cyan Américas Towers Hotel",
         "nights": 3,
@@ -30,7 +30,7 @@
         "littleImage1":"iguazu-little1.jpeg",
         "litlleImage2":"iguazu-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "JetSMART",
         "hotel":"Complejo Turístico Americano",
         "nights": 3,
@@ -50,7 +50,7 @@
         "littleImage1":"bariloche-little1.jpeg",
         "litlleImage2":"bariloche-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "Flybondi",
         "hotel":"Hotel Nevada",
         "nights": 4,
@@ -72,7 +72,7 @@
         "littleImage1":"calafate-little1.jpeg",
         "litlleImage2":"calafate-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
         "hotel":"Lagos Del Calafate",
         "nights": 4,
@@ -93,7 +93,7 @@
         "littleImage1":"chalten-little1.jpeg",
         "litlleImage2": "chalten-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
         "hotel":"Hostería El Paraíso",
         "nights": 4,
@@ -115,7 +115,7 @@
         "littleImage1":"ushuaia-little1.jpeg",
         "litlleImage2":"ushuaia-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "JetSMART",
         "hotel":"Albatros Hotel",
         "nights": 5,
@@ -137,7 +137,7 @@
         "littleImage1":"puertoMadryn-little1.jpeg",
         "litlleImage2":"puertoMadryn-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
         "hotel":"Hotel La Posada De Madryn",
         "nights": 4,
@@ -159,7 +159,7 @@
         "littleImage1":"torresdelPaine-little1.jpeg",
         "litlleImage2":"torresdelPaine-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
         "hotel":"Explora Patagonia Hotel Salto Chico",
         "nights": 4,
@@ -181,7 +181,7 @@
         "littleImage1":"mendoza-little1.jpeg",
         "litlleImage2":"mendoza-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
         "hotel":"Argentino Hotel",
         "nights": 4,
@@ -203,7 +203,7 @@
         "littleImage1":"salta-little1.jpeg",
         "litlleImage2":"salta-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
         "hotel":"Hotel Salta",
         "nights": 4,
@@ -225,7 +225,7 @@
         "littleImage1":"esterosdelIbera-little1.jpeg",
         "litlleImage2":"esterosdelIbera-little2.jpeg"
         },
-        "transport ": "Vuelo",
+        "transport": "Vuelo",
         "operatedBy": "Aerolíneas Argentinas",
         "hotel":"Puerto Valle Hotel de Esteros",
         "nights": 4,
