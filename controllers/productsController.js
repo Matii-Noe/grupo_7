@@ -11,32 +11,64 @@ const controller = {
 	catalogue: (req, res) => {
 		res.render('catalogue');
 	},
+
+	// Detail - Detail from one product
+	detail: (req, res) => {
+	let id = req.params.id
+	let product = products.find(product => product.id == id)
+	res.render('productDetail', { product})
+	},
+
 	//Este método renderiza el form de creación de los productos
 	create: (req, res) => {
 		res.render('create');
 	},
 
 	processCreate: (req, res) => {
-		res.redirect('processCreate');
+		let newProd = {
+			id: products[products.length - 1].id + 1,
+			...req.body
+		};
+
+		products.push(newProd);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+
+		res.redirect('index');
 	},
 
 	edit: (req, res) => {
-		res.render('edit');
+		let id = req.params.id ;
+		let product = products.find(product => product.id == id);
+		res.render('edit', {product});
 	},
 
 	processEdit: (req, res) => {
-		res.redirect('processCreate');
+		let id = req.params.id ;
+		let prodEdit = products.find(product => product.id == id);
+		prodEdit = {
+			id: prodEdit.id ,
+			...req.body
+		};
+
+		let newEdit = products.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = { ...productToEdit };
+			}
+			return product;
+		})
+		fs.writeFileSync(productsFilePath, JSON.stringify(newEdit, null, " "));
+		res.redirect('index');
 	},
 
-	productDetail: (req, res) => {
-		res.render('productDetail');
-	},
 	productCart: (req, res) => {
 		res.render('productCart')
 	},
 
 	destroy: (req, res) => {
-		res.render('catalogue');
+		let id = req.params.id;
+		let borrar = products.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(borrar, null, " "));
+		res.redirect('index');
 	}
 
 };
