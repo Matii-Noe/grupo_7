@@ -64,3 +64,26 @@ Posponer algunas tareas.
 ## Dejar de hacer
 
 Pasarnos del plazo de entrega que se nos asignó.
+
+
+# Sprint 4
+
+## Comenzar a hacer
+
+Implementar una reunion de 15min máximo.
+
+## Hacer mas
+
+Completar las incidencias en el Jira(Intercactuar màs con la página).
+
+## Continuar haciendo
+
+Revisar el proyecto antes de entregarlo.
+
+## Hacer menos
+
+Posponer las reuniones asignadas.
+
+## Dejar de hacer
+
+Finalizar el sprint a último momento
