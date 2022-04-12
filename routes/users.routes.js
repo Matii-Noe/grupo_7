@@ -17,16 +17,18 @@ const path = require('path');
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
+const indexController = require('../controllers/indexController');
 
 //RUTAS ACCESIBLE POR CUALQUIERA
-router.get('/login', usersController.login); 
-router.post('/', usersController.loginProcess); 
+router.get('/everyone', indexController.index);
 
 //RUTA ACCESIBLE SOLO SIN LOGIN
-
+router.get('/without-login', usersController.register);
+router.post('/', usersController.processRegister); 
 
 //RUTA ACCESIBLE SOLO CON LOGIN
-
+router.get('/user-login', usersController.login)
+router.post('/', usersController.loginProcess); 
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/register', usersController.register); 
