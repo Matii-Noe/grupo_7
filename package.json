@@ -4,7 +4,8 @@
   "description": "Proyecto integrador grupo 7 - Digital House",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

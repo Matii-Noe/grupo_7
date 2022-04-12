@@ -18,9 +18,15 @@ const path = require('path');
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
 
-
+//RUTAS ACCESIBLE POR CUALQUIERA
 router.get('/login', usersController.login); 
 router.post('/', usersController.loginProcess); 
+
+//RUTA ACCESIBLE SOLO SIN LOGIN
+
+
+//RUTA ACCESIBLE SOLO CON LOGIN
+
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/register', usersController.register); 
