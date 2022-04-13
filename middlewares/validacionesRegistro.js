@@ -1,5 +1,5 @@
 const fs = require('fs');
-const check = require('express-validator');
+const {check} = require('express-validator');
 
 let validateRegister = [
     check('name')

@@ -32,7 +32,7 @@ const controller = {
 
 		products.push(newProd);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
+		
 		res.redirect('index');
 	},
 

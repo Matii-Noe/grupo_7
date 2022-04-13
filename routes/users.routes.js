@@ -1,7 +1,7 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
-/*const multer = require('multer')*/
+const multer = require('multer')
 const path = require('path');
 
 //Multer config
@@ -31,8 +31,8 @@ router.get('/user-login', usersController.login)
 router.post('/', usersController.loginProcess); 
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/register', usersController.register); 
-router.post('/', usersController.processRegister); 
+router.get('/register', usersController.register);
+router.post('/', usersController.processRegister);
 
 /*** EDIT ONE PRODUCT ***/ 
 
