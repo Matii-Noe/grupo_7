@@ -1,102 +1,102 @@
 [
-    {
-     "id": 1,
-     "first-name": "Manuel",
-     "last-name": "Ferrari",
-     "email": "manuelferrari@gmail.com",
-     "password": 12345,
-     "category": "user",
-     "image": "img.jpg"
-    },
-
-    {
-        "id": 2,
-        "first-name": "Ricardo",
-        "last-name": "Gómez",
-        "email": "josegomez@gmail.com",
-        "password": 22225,
-        "category": "user",
-        "image": "img.jpg"
-       },
-
-       {
-        "id": 3,
-        "first-name": "Florencia",
-        "last-name": "Vigna",
-        "email": "florvigna@gmail.com",
-        "password": 55555,
-        "category": "user",
-        "image": "img.jpg"
-       },
-
-       {
-        "id": 4,
-        "first-name": "Pablo",
-        "last-name": "Escobar",
-        "email": "p_escobar@gmail.com",
-        "password": 54321,
-        "category": "user",
-        "image": "img.jpg"
-       },
-
-       {
-        "id": 5,
-        "first-name": "Azul",
-        "last-name": "Rossi",
-        "email": "azu_rossi@gmail.com",
-        "password": 10001,
-        "category": "user",
-        "image": "img.jpg"
-       },
-
-
-       {
-        "id": 6,
-        "first-name": "Manuel",
-        "last-name": "Ferrari",
-        "email": "manuelferrari@gmail.com",
-        "password": 12345,
-        "category": "user",
-        "image": "img.jpg"
-       },
-
-       {
-        "id": 7,
-        "first-name": "Enzo",
-        "last-name": "Pérez",
-        "email": "enzo_p@gmail.com",
-        "password": 33333,
-        "category": "user",
-        "image": "img.jpg"
-       },
-
-       {
-        "id": 8,
-        "first-name": "Cristiano",
-        "last-name": "Ronaldo",
-        "email": "cr7@gmail.com",
-        "password": 12344,
-        "category": "user",
-        "image": "img.jpg"
-       },
-
-       {
-        "id": 9,
-        "first-name": "Alejandro",
-        "last-name": "Magno",
-        "email": "ale_magno@gmail.com",
-        "password": 22222,
-        "category": "user",
-        "image": "img.jpg"
-       },
-
-       {
-        "id": 10,
-        "first-name": "Napoleón",
-        "last-name": "Bonaparte",
-        "email": "bonaparte_33@gmail.com",
-        "password": 55110,
-        "category": "user",
-        "image": "img.jpg"
-       }
+ {
+  "id": 1,
+  "first-name": "Manuel",
+  "last-name": "Ferrari",
+  "email": "manuelferrari@gmail.com",
+  "password": 12345,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 2,
+  "first-name": "Ricardo",
+  "last-name": "Gómez",
+  "email": "josegomez@gmail.com",
+  "password": 22225,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 3,
+  "first-name": "Florencia",
+  "last-name": "Vigna",
+  "email": "florvigna@gmail.com",
+  "password": 55555,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 4,
+  "first-name": "Pablo",
+  "last-name": "Escobar",
+  "email": "p_escobar@gmail.com",
+  "password": 54321,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 5,
+  "first-name": "Azul",
+  "last-name": "Rossi",
+  "email": "azu_rossi@gmail.com",
+  "password": 10001,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 6,
+  "first-name": "Manuel",
+  "last-name": "Ferrari",
+  "email": "manuelferrari@gmail.com",
+  "password": 12345,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 7,
+  "first-name": "Enzo",
+  "last-name": "Pérez",
+  "email": "enzo_p@gmail.com",
+  "password": 33333,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 8,
+  "first-name": "Cristiano",
+  "last-name": "Ronaldo",
+  "email": "cr7@gmail.com",
+  "password": 12344,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 9,
+  "first-name": "Alejandro",
+  "last-name": "Magno",
+  "email": "ale_magno@gmail.com",
+  "password": 22222,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 10,
+  "first-name": "Napoleón",
+  "last-name": "Bonaparte",
+  "email": "bonaparte_33@gmail.com",
+  "password": 55110,
+  "category": "user",
+  "image": "img.jpg"
+ },
+ {
+  "id": 11,
+  "name": [
+   "matias",
+   "martin"
+  ],
+  "email": "matiasmartinnnn@gmail.com",
+  "password": "matias123martin",
+  "user": "usuario"
+ }
 ]

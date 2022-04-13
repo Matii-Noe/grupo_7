@@ -34,18 +34,6 @@ app.use("/", indexRouter);
 app.use("/user", usersRouter);
 app.use("/products", productsRouter);
 
-/* RUTAS USER */
-
-app.use("/register", usersRouter);
-app.use('/login', usersRouter);
-
-/* RUTAS PRODUCTOS */
-
-app.use('/productCart', productsRouter);
-app.use('/productDetail', productsRouter);
-app.use('/create', productsRouter);
-
-
 // catch 404 and forward to error handler
 /* app.use(function (req, res, next) {
   next(createError(404));

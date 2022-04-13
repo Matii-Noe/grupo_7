@@ -15,13 +15,13 @@ const controller = {
 		const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
-			return res.render('users/registro', {
+			return res.render('user/registro', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
 		}
-		user.create(req.body);
-		return res.send('Ok, se guardo')
+		User.create(req.body);
+		return res.send('Ok, se guardo el usuario');
 	},
     login: (req, res) => {
 		res.render('login');

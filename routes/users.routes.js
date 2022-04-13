@@ -4,16 +4,22 @@ const router = express.Router();
 const multer = require('multer')
 const path = require('path');
 
+/*Middlewares*/
+
+const validateRegister = require('../middlewares/validacionesRegistro');
+
 //Multer config
 var storage = multer.diskStorage({
     destination: function(req,file,cb) {
-        cb(null,'public/images/users');
+        cb(null,'public/images/avatars');
     },
 
     filename: function(req,file,cb) {
         cb(null,'file.fieldname' + '-' + Date.now() + path.extname(file.originalname));
     }
 });
+var upload = multer({ storage: storage });
+
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
@@ -24,14 +30,14 @@ router.get('/everyone', indexController.index);
 
 //RUTA ACCESIBLE SOLO SIN LOGIN
 router.get('/without-login', usersController.register);
-router.post('/', usersController.processRegister); 
+router.post('/without-login', upload.single('image'),validateRegister, usersController.processRegister); 
 
 //RUTA ACCESIBLE SOLO CON LOGIN
 router.get('/user-login', usersController.login)
 router.post('/', usersController.loginProcess); 
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/register', usersController.register);
+router.get('/register',usersController.register);
 router.post('/', usersController.processRegister);
 
 /*** EDIT ONE PRODUCT ***/ 
