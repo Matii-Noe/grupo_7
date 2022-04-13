@@ -1,44 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('partials/head', {title: 'Crear producto'}) %>
-    <link rel="stylesheet" href="/css/createProduct.css">
+    <%- include('partials/head', {title: 'Crear producto' }) %>
+        <link rel="stylesheet" href="/css/createProduct.css">
 </head>
+
 <body>
     <header>
         <%- include('partials/header.ejs') %>
     </header>
     <main>
         <div>
-          <h2>Formulario de creación de productos</h2>
+            <h2>Formulario de creación de productos</h2>
         </div>
         <div>
             <form action="/create" method="POST" enctype="multipart/form-data">
-				<div>
-					<div>
-						<label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" id="name" name="name" class="form-input" required>
-					</div>
-					<div>
-						<label for="price" class="form-label">Precio del producto:</label>
-						<input type="text" id="price" name="price" class="form-input" required>
-					</div>
-					<div>
-						<label for="description" class="form-label">Descripción:</label>
-						<textarea name="description" id="description" class="form-input" required></textarea>
-					</div>
+                <div>
                     <div>
-                        <label for="productimage" class="form-label">Carga la imagen de tu producto:</label>
-                        <input type="file" name="productimage" accept=".jpg" accept=".png" id="productimage" class="form-input">
+                        <label for="productName" class="form-label">Nombre del producto:</label>
+                        <input type="text" id="productName" name="productName" class="form-input" required>
                     </div>
+                    <div>
+                        <label for="description" class="form-label">Descripción:</label>
+                        <textarea name="description" id="description" class="form-input" required></textarea>
+                    </div>
+                    <div>
+                        <label for="bigImage" class="form-label">Carga la imagen de tu producto(872x497):</label>
+                        <input type="file" name="bigImage" accept=".jpg" accept=".png" id="bigImage" class="form-input">
+                        <label for="mediumImage" class="form-label">Carga la imagen de tu producto(746x312):</label>
+                        <input type="file" name="mediumImage" accept=".jpg" accept=".png" id="mediumImage"
+                            class="form-input">
+                        <label for="littleImage1" class="form-label">Carga la imagen de tu producto(372x187):</label>
+                        <input type="file" name="littleImage1" accept=".jpg" accept=".png" id="littleImage1"
+                            class="form-input">
+                        <label for="littleImage2" class="form-label">Carga la imagen de tu producto(372x187):</label>
+                        <input type="file" name="littleImage2" accept=".jpg" accept=".png" id="littleImage2"
+                            class="form-input">
+                    </div>
+                    <div>
+                        <label for="transport" class="form-label">Transporte:</label>
+                        <select name="transport" id="transport" class="form-input">
+                            <option value="">Elegí</option>
+                            <option value="Vuelo">Vuelo</option>
+                            <option value="Bus">Bus</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="operatedBy" class="form-label">Operado por:</label>
+                        <input type="text" id="operatedBy" name="operatedBy" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="hotel" class="form-label">Nombre del hotel:</label>
+                        <input type="text" id="hotel" name="hotel" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="nights" class="form-label">Cantidad de noches:</label>
+                        <input type="text" id="nights" name="nights" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="roomType" class="form-label">Tipo de habitación:</label>
+                        <input type="text" id="roomType" name="roomType" class="form-input" required>
+                    </div>
+                    <div>
+                        <h4 class="form-input">Actividades:</h4>
+                        <div>
+                            <label for="activity1" class="form-label">Actividad 1:</label>
+                            <input type="text" id="activity1" name="activity1" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="activity2" class="form-label">Actividad 2(Opcional):</label>
+                            <input type="text" id="activity2" name="activity2" class="form-input">
+                        </div>
+                        <div>
+                            <label for="activity3" class="form-label">Actividad 3(Opcional):</label>
+                            <input type="text" id="activity3" name="activity3" class="form-input">
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="form-input">Categorías:</h4>
+                            <label for="category"><input type="checkbox" name="category1" id="Destinos" value="Destinos">Destinos</label>
+                            <label for="category"><input type="checkbox" name="category2" id="Estilos" value="Estilos">Estilos de viaje</label>
+                            <label for="category"><input type="checkbox" name="category3" id="Familia" value="Familia">Viajes en familia</label>
+                            <label for="category"><input type="checkbox" name="category4" id="Gastronomico" value="Gastronomico">Viajes gastronómicos</label>
+                            <label for="category"><input type="checkbox" name="category5" id="Trekking" value="Trekking">Trekking y aventura</label>
+                            <label for="category"><input type="checkbox" name="category6" id="Escapadas" value="Escapadas">Escapadas</label>
+                            <label for="category"><input type="checkbox" name="category7" id="EnAuto" value="EnAuto">Viajes en auto</label>
+                            <label for="category"><input type="checkbox" name="category8" id="Romantico" value="Romantico">Escapadas románticas</label>
+                            <label for="category"><input type="checkbox" name="category9" id="Naturaleza" value="Naturaleza">Naturaleza y paisajes</label>
+                            <label for="category"><input type="checkbox" name="category10" id="Patrimonio" value="Patrimonio">Patrimonio y cultura</label>
+                            <label for="category"><input type="checkbox" name="category11" id="Lujos" value="Lujos">Viajes de lujo</label>
+						</select>
+                    </div>
+                    <div>
+                        <label for="price" class="form-label">Precio del producto:</label>
+                        <input type="text" id="price" name="price" class="form-input" required>
+                    </div>
+
                     <div>
                         <button type="submit" class="createbutton">Crear producto</button>
                     </div>
                 </div>
-				
-				
-			</form>
+
+
+            </form>
         </div>
-    </main>   
+    </main>
 </body>
+
 </html>

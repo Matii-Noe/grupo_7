@@ -38,6 +38,7 @@ header .menu-principal {
     margin: 20px;
     font-family: PT Sans Narrow;
     color: var(--blanco);
+    font-size: 2rem;
 }
 
 header nav a {
@@ -46,13 +47,22 @@ header nav a {
 }
 
 div img {
-    max-height: 5rem;
-    max-width: 10rem;
+    max-height: 25rem;
+    max-width: 50rem;
 }
 
 /*FORM*/
 body{
     background-color: var(--gris-claro);
+}
+
+h1{
+    font-family: Roboto;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 30rem;
 }
 
 h2{
@@ -73,7 +83,7 @@ form{
 }
 
 .form-label {
-    display: inline-block;
+    display: block;
     font-size: 1.6em;
     margin: 10px 0;
   }

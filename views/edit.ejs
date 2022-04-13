@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar producto</title>
-    <link rel="stylesheet" href="/css/edit.css">
+    <link rel="stylesheet" href="/css/createProduct.css">
 </head>
 <body>
     <header>
@@ -22,21 +22,93 @@
 
         <form action="/edit/<%= product.id %>?_method=PATCH " method="POST" enctype="multipart/form-data" id="edit">
 
-            <h1> Editando: <%= product.productName %>  </h1>
             
             <div class="input">
        
-                 <input class="nombre" type="text" name="" id="nombre" placeholder="Nombre:" required>
-
-                 <input class="precio" type="text" name="" id="precio" placeholder="Precio:" required> <br>
-                
-                 <input class="descuento" type="text" name="" id="descuento" placeholder="Descuento:" required>
-                    
-                 <input class="categoria" type="text" name="" id="categoria" placeholder="Categoría:" required> <br>
+                <div>
+                    <br>
+                    <br>
+                    <h1 class="form-input"> Editando: <%= product.productName %>  </h1>
+                    <br>
+                    <div>
+                        <label for="productName" class="form-label">Nombre del producto:</label>
+                        <input type="text" id="productName" name="productName" value="<%= product.productName %>" required>
+                    </div>
+                    <div>
+                        <label for="description" class="form-label">Descripción:</label>
+                        <textarea name="description" id="description" value="<%= product.description %>" class="form-input" required></textarea>
+                    </div>
+                    <div>
+                        <label for="bigImage" class="form-label">Carga la imagen de tu producto(872x497):</label>
+                        <input type="file" name="bigImage" accept=".jpg" accept=".png" id="bigImage" class="form-input">
+                        <label for="mediumImage" class="form-label">Carga la imagen de tu producto(746x312):</label>
+                        <input type="file" name="mediumImage" accept=".jpg" accept=".png" id="mediumImage" class="form-input">
+                        <label for="littleImage1" class="form-label">Carga la imagen de tu producto(372x187):</label>
+                        <input type="file" name="littleImage1" accept=".jpg" accept=".png" id="littleImage1" class="form-input">
+                        <label for="littleImage2" class="form-label">Carga la imagen de tu producto(372x187):</label>
+                        <input type="file" name="littleImage2" accept=".jpg" accept=".png" id="littleImage2" class="form-input">
+                    </div>
+                    <div>
+                        <label for="transport" class="form-label">Transporte:</label>
+                        <select name="transport" id="transport" class="form-input">
+                            <option value="">Elegí</option>
+                            <option value="Vuelo">Vuelo</option>
+                            <option value="Bus">Bus</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="operatedBy" class="form-label">Operado por:</label>
+                        <input type="text" id="operatedBy" name="operatedBy" value="<%= product.operatedBy %>" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="hotel" class="form-label">Nombre del hotel:</label>
+                        <input type="text" id="hotel" name="hotel" value="<%= product.hotel %>" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="nights" class="form-label">Cantidad de noches:</label>
+                        <input type="text" id="nights" name="nights" value="<%= product.nights %>" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="roomType" class="form-label">Tipo de habitación:</label>
+                        <input type="text" id="roomType" name="roomType" value="<%= product.roomType %>" class="form-input" required>
+                    </div>
+                    <div>
+                        <h4 class="form-input">Actividades:</h4>
+                        <div>
+                            <label for="activity1" class="form-label">Actividad 1:</label>
+                            <input type="text" id="activity1" name="activity1" value="<%= product.activities.activity1 %>" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="activity2" class="form-label">Actividad 2(Opcional):</label>
+                            <input type="text" id="activity2" name="activity2" value="<%= product.activities.activity2 %>" class="form-input">
+                        </div>
+                        <div>
+                            <label for="activity3" class="form-label">Actividad 3(Opcional):</label>
+                            <input type="text" id="activity3" name="activity3" value="<%= product.activities.activity3 %>" class="form-input">
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="form-input">Categorías:</h4>
+                            <label for="category"><input type="checkbox" name="category1" id="Destinos" value="Destinos">Destinos</label>
+                            <label for="category"><input type="checkbox" name="category2" id="Estilos" value="Estilos">Estilos de viaje</label>
+                            <label for="category"><input type="checkbox" name="category3" id="Familia" value="Familia">Viajes en familia</label>
+                            <label for="category"><input type="checkbox" name="category4" id="Gastronomico" value="Gastronomico">Viajes gastronómicos</label>
+                            <label for="category"><input type="checkbox" name="category5" id="Trekking" value="Trekking">Trekking y aventura</label>
+                            <label for="category"><input type="checkbox" name="category6" id="Escapadas" value="Escapadas">Escapadas</label>
+                            <label for="category"><input type="checkbox" name="category7" id="EnAuto" value="EnAuto">Viajes en auto</label>
+                            <label for="category"><input type="checkbox" name="category8" id="Romantico" value="Romantico">Escapadas románticas</label>
+                            <label for="category"><input type="checkbox" name="category9" id="Naturaleza" value="Naturaleza">Naturaleza y paisajes</label>
+                            <label for="category"><input type="checkbox" name="category10" id="Patrimonio" value="Patrimonio">Patrimonio y cultura</label>
+                            <label for="category"><input type="checkbox" name="category11" id="Lujos" value="Lujos">Viajes de lujo</label>
+						</select>
+                    </div>
+                    <div>
+                        <label for="price" class="form-label">Precio del producto:</label>
+                        <input type="text" id="price" name="price" value="<%= product.price %>"  class="form-input"required>
+                    </div>
 
             </div>
 
-            <div class="descripcion"> <input type="text" name="" id="name" placeholder="Descripción:" required> <br> </div>
 
             <div class="buttons">
                 
