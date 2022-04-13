@@ -11,25 +11,34 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous"/>
 </head>
 <body>
-    <form action="" method="POST" id="form">
+    <form action="" method="POST" id="form" enctype="multipart/form-data">
         <div class="form">
             <h1>Crea tu cuenta</h1>
             <div class="grupo">
                 <input type="text" name="" id="name" required><span class="barra"></span>
-                <label for=""> Nombre</label>
+                <label for=""> FirstName</label>
+            </div>
+            <div class="grupo">
+                <input type="text" name="" id="name" required><span class="barra"></span>
+                <label for=""> LastName</label>
             </div>
         <div class="grupo">
             <input type="email" name="" id="name" required><span class="barra"></span>
             <label for="">Email</label>
             <p><i class="fa-solid fa-circle-info"></i>Accedé con el mail que realizaste la compra</p>
         </div>
-
         <div class="grupo">
             <input type="password" name="" id="name" required><span class="barra"></span>
             <label for="">Contraseña</label>
             <p>Usá entre 8 y 16 carácteres</p>
+        <div>
+            <label for="user"> Elige una categoria</label>
+            <select name="user" id="user">
+                <option value="usuario">Usuario </option>
+                <option value="admin">Admin </option>
+            </select>
         </div>
-
+        </div>
             <button type="submit"> Registrate</button>
             <p>Al registrarse aceptas los <a href="">Terminos y Condiciones</a></p>
         </div>
@@ -42,7 +51,7 @@
                     <button type="button"> <a href=""><i class="fa-brands fa-apple"></i>Ingresar con Apple</a></button>
         </div>
                 <h4>¿Ya tenés cuenta?</h4>
-        <div class="ingresar">
+                <div class="ingresar">
                 <button type="button">Ingresar</button>
         </div>
     </form>
