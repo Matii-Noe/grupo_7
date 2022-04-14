@@ -21,7 +21,7 @@ const controller = {
 			});
 		}
 		User.create(req.body);
-		return res.send('Ok, se guardo el usuario');
+		return res.redirect('user');
 	},
     login: (req, res) => {
 		res.render('login');

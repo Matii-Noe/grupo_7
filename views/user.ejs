@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <%- include('partials/head', {title: 'Pagina de usuario' }) %>
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+
 <body>
-    <h1>Hola usuario etc etc</h1>
-    <img src="/public/images/avatars/" alt="Foto de perfil">
-    <h1>Correo electronico:</h1>
-    <h1>Categoria:</h1>
+
+    <header>
+        <%- include('partials/header.ejs') %>
+    </header>
+
+    <main>
+        <h1>Hola, <%= user.first-name %> </h1>
+        <img src="/public/images/avatars/<%= user.image %> " alt="Foto de perfil">
+        <h1>Correo electronico: <%= user.email %> </h1>
+        <h1>Categoria: <%= user.category %> </h1>
+    </main>
+    
+    <footer>
+        <%- include('partials/footer.ejs') %>
+    </footer>
+
 </body>
 </html>
