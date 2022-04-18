@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="https://fonts.google.com/specimen/Roboto"
-    rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Roboto" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/login.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous" />
 </head>
+
 <body>
 
-    <form action="" method="POST" id="form">
+    <form action="/user/user-login" method="POST" id="form">
         <div class="form">
             <h1>Accede a tu cuenta</h1>
             <div class="grupo">
-                <input type="text" name="" id="name" required><span class="barra"></span>
                 <label for=""> Nombre de usuario</label>
+                <input type="text" name="firstName" id="firstName" required><span class="barra"></span>
             </div>
-        <div class="grupo">
-            <input type="email" name="" id="name" required><span class="barra"></span>
-            <label for="">Email</label>
-        </div>
+            <div class="grupo">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required><span class="barra"></span>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+            </div>
 
-        <div class="grupo">
-            <input type="password" name="" id="name" required><span class="barra"></span>
-            <label for="">Ingresá tu contraseña</label>
-        </div>
+            <div class="grupo">
+                <label for="password">Ingresá tu contraseña</label>
+                <input type="password" name="password" id="password" required><span class="barra"></span>
+            </div>
+
+            <div class="recordame">
+            <label for="">Recordar mi usuario</label>
+                <input type="checkbox" name="remember_user">
+            </div>
+
 
             <button type="submit"> Ingresar </button>
-            
-                <h4>Ingresá con un sólo paso.</h4>
-            
-        <div class="botones">
-                    <button type="button"> <a href=""><i class="fa-brands fa-facebook"></i>Ingresar con Facebook</a></button>
-                    <button type="button"> <a href=""><i class="fa-brands fa-google"></i>Ingresar con Google</a></button>
-                    <button type="button"> <a href=""><i class="fa-brands fa-apple"></i>Ingresar con Apple</a></button>
-        
+
+            <h4>Ingresá con un sólo paso.</h4>
+
+            <div class="botones">
+                <button type="button"> <a href=""><i class="fa-brands fa-facebook"></i>Ingresar con
+                        Facebook</a></button>
+                <button type="button"> <a href=""><i class="fa-brands fa-google"></i>Ingresar con Google</a></button>
+                <button type="button"> <a href=""><i class="fa-brands fa-apple"></i>Ingresar con Apple</a></button>
+
     </form>
 
 </body>
+
 </html>

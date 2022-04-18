@@ -7,6 +7,8 @@ const path = require('path');
 /*Middlewares*/
 
 const validateRegister = require('../middlewares/validacionesRegistro');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 //Multer config
 var storage = multer.diskStorage({
@@ -29,18 +31,15 @@ const indexController = require('../controllers/indexController');
 router.get('/everyone', indexController.index);
 
 //RUTA ACCESIBLE SOLO SIN LOGIN
-router.get('/without-login', usersController.register);
+router.get('/without-login', guestMiddleware, usersController.register);
 router.post('/without-login', upload.single('image'),validateRegister, usersController.processRegister); 
 
 //RUTA ACCESIBLE SOLO CON LOGIN
-router.get('/user-login', usersController.login)
-router.post('/', usersController.loginProcess); 
+router.get('/user-login', guestMiddleware, usersController.login)
+router.post('/user-login', usersController.loginProcess); 
+router.get('/profile',authMiddleware, usersController.profile);
 
-/*** CREATE ONE PRODUCT ***/ 
-router.get('/register',usersController.register);
-router.post('/', usersController.processRegister);
 
-/*** EDIT ONE PRODUCT ***/ 
 
 
 module.exports = router;
