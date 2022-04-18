@@ -6,6 +6,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const User = require('../models/User');
 const {validationResult}=require('express-validator');
 
+
 const controller = {
 	register: (req, res) => {
 		res.render('register');
@@ -20,8 +21,29 @@ const controller = {
 				oldData: req.body
 			});
 		}
-		User.create(req.body);
-		return res.redirect('user');
+		
+	let userInDB = User.findByField('email', req.body.email);
+
+	if (userInDB){
+		return res.render('register', {
+			errors: {
+				email: {
+					msg: 'este email ya esta registrado'
+				}
+			},
+			oldData: req.body,
+		})
+	}
+
+		let userToCreate = {
+			...req.boddy,
+			password: brcypt.hashSync(req.body.password, 10),
+			avatar: req.fileName
+		}
+
+		User.create(userToCreate);
+
+		return res.redirect('login');
 	},
     login: (req, res) => {
 		res.render('login');
