@@ -87,3 +87,26 @@ Posponer las reuniones asignadas.
 ## Dejar de hacer
 
 Finalizar el sprint a último momento
+
+
+# Sprint 5
+
+## Comenzar a hacer
+
+Participar mas activamente en las reuniones
+
+## Hacer mas
+
+Las actividades opcionales de los sprints
+
+## Continuar haciendo
+
+Implementar una reunion de 15min máximo.
+
+## Hacer menos
+
+Reuniones tan largas de sprint
+
+## Dejar de hacer
+
+Posponer las reuniones asignadas.
