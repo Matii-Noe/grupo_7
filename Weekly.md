@@ -11,3 +11,10 @@ Hasta ahora no encontramos inconvenientes.
 ## ¿Que va a hacer hoy?
 
 Crear un perfil de usuario.
+
+
+# Sprint 6
+
+## ¿Que hizo?
+
+Hicimos el diamagrama de entidades y relaciones, completamos la retro y asignamos las tareas del jira.(primera weekly)
