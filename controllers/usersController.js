@@ -37,20 +37,20 @@ const controller = {
 		}
 
 		let userToCreate = {
-			...req.boddy,
+			...req.body,
 			password: bcrypt.hashSync(req.body.password, 10),
-			avatar: req.fileName
+			avatar: req.file.filename
 		}
 
 		User.create(userToCreate);
 
-		return res.redirect('login');
+		return res.redirect('user/user-login');
 	},
-	login: (req, res) => {
-		res.render('login');
+	login: function (req, res) {
+		return res.render('login');
 	},
 
-	loginProcess: (req, res) => {
+	loginProcess: function (req, res) {
 		let userToLogin = User.findByField('email', req.body.email);
 		if (userToLogin){
 			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
@@ -77,8 +77,16 @@ const controller = {
 		}})
 	},
 	profile: (req, res) =>  {
-    res.render('user/profile',{user:req.session.userLogged});
+	console.log (req.session.userLogged)
+    res.redirect ('/');
+	//agregar profile.ejs
 	},
+	logout: (req, res) => {
+		res.clearCookie('userEmail')
+		req.session.destroy()
+		res.locals.usuarioActual = null
+		res.redirect('/')
+	}
 };
 
 module.exports = controller;

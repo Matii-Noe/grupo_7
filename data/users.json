@@ -98,5 +98,16 @@
   "email": "matiasmartinnnn@gmail.com",
   "password": "matias123martin",
   "user": "usuario"
+ },
+ {
+  "id": 12,
+  "name": [
+   "Antonella ",
+   "Mantovani"
+  ],
+  "email": "abrilmantovani@gmail.com",
+  "password": "$2a$10$dl5vxsNOsPL9sbSPm2462uKc7U1lxkqIAIrt.n9fXmRs809OLdxLK",
+  "user": "usuario",
+  "avatar": "file.fieldname-1651634706378.jpg"
  }
 ]

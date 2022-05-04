@@ -9,7 +9,20 @@
           <p> Lunes a Viernes de 9 a 22. Sabados, Domingos y Feriados de 10 a 18H</p>
          </div>
           <a href=""><i class="fa-regular fa-pen-to-square"></i> Reserva</a>
-          <a href=""><i class="fa-regular fa-user"></i> Ingresar</a>
+        <% if (locals.isLogged) { %>
+       <a href="">
+           <p>Hola! <%= locals.usuarioActual.name%> 
+ 
+           </p>
+       </a> 
+
+       <a href="/user/logout">
+           Cerrar sesión
+       </a>
+        <% } else{ %>
+            <a href="/user/user-login"><i class="fa-regular fa-user"></i> Ingresar</a>    
+        <% } %> 
+          
         </div>
       <nav>
           <ul>
