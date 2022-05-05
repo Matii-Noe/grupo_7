@@ -44,7 +44,7 @@ const controller = {
 
 		User.create(userToCreate);
 
-		return res.redirect('user/user-login');
+		return res.redirect('login');
 	},
 	login: function (req, res) {
 		return res.render('login');
