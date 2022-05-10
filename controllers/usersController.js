@@ -36,10 +36,17 @@ const controller = {
 			})
 		}
 
+		let avatar
+
+			if(req.file != undefined) {
+	 			avatar = req.file.filename
+			} else {
+		avatar = 'img.jpg'
+}
 		let userToCreate = {
 			...req.body,
 			password: bcrypt.hashSync(req.body.password, 10),
-			avatar: req.file.filename
+			avatar: avatar
 		}
 
 		User.create(userToCreate);
@@ -52,8 +59,11 @@ const controller = {
 
 	loginProcess: function (req, res) {
 		let userToLogin = User.findByField('email', req.body.email);
+		console.log(userToLogin)
+		console.log(req.body.password)
 		if (userToLogin){
 			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+			
 			if (isOkThePassword) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;

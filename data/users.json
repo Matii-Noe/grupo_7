@@ -109,5 +109,27 @@
   "password": "$2a$10$dl5vxsNOsPL9sbSPm2462uKc7U1lxkqIAIrt.n9fXmRs809OLdxLK",
   "user": "usuario",
   "avatar": "file.fieldname-1651634706378.jpg"
+ },
+ {
+  "id": 13,
+  "name": [
+   "Martin",
+   "Matias"
+  ],
+  "email": "matiasmartin@gmail.com",
+  "password": "$2a$10$rgt6k7nJ.H6X4WbDDqoiLO9WPgpq20VlpO4P0e01TMQq0BC9R0laC",
+  "user": "usuario",
+  "avatar": "file.fieldname-1652140498053.jpg"
+ },
+ {
+  "id": 14,
+  "name": [
+   "Matias",
+   "Noe"
+  ],
+  "email": "matiasnoe@gmail.com",
+  "password": "$2a$10$F65M6QdOwR/RJJGkDoSDHe9ze9Ku2VU5b.oiCEyUFfXb/Dcx8/Nha",
+  "user": "usuario",
+  "avatar": "img.jpg"
  }
 ]
