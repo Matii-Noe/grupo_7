@@ -5,7 +5,6 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const User = require('../models/User');
 const { validationResult } = require('express-validator');
-const res = require('express/lib/response');
 
 
 const controller = {

@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         nights: {
-            type: DataTypes.Decimal,
+            type: DataTypes.INTEGER,
             allowNull: false
         }
     };
