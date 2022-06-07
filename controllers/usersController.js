@@ -16,7 +16,7 @@ const controller = {
 		const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
-			return res.render('user/registro', {
+			return res.render('register', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});

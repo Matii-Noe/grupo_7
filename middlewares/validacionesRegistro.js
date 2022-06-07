@@ -11,7 +11,7 @@ let validateRegister = [
     check('password')
         .notEmpty().withMessage('Debes completar este campo')
         .isLength({min: 8, max:20}).withMessage('Este campo debe tener entre 6 y 15 caracteres')
-        /* .has().uppercase().withMessage('Debe contener al menos una mayúscula, minúscula y un número')  */
+        .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/, "i").withMessage('Debe contener hola')
 ];
 
 module.exports = validateRegister;
