@@ -7,6 +7,7 @@ const path = require('path');
 const db = require('../database/models');
 const {Op} = require('sequelize');
 const Product = require('../database/models/Product');
+const { REPL_MODE_SLOPPY } = require('repl');
 const Sequelize = db.sequelize;
 
 
@@ -21,7 +22,7 @@ const controller = {
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-		db.Product.findByPk(req.params.id, {include: [{association: 'activities'}]})
+		db.Product.findByPk(req.params.id, {include: [{model: Activity, as: 'activities'}]})
 		.then(products => {
 			console.log(products);
 			res.render('productDetail.ejs', { products })
