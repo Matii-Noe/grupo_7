@@ -1,6 +1,7 @@
 var createError = require("http-errors");
 var express = require("express");
-var path = require("path");
+var
+ path = require("path");
 var indexRouter = require("./routes/index.routes");
 var productsRouter = require("./routes/products.routes");
 var usersRouter = require("./routes/users.routes");
@@ -10,7 +11,6 @@ var methodOverride = require("method-override");
 var session = require("express-session");
 var app = express();
 var userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
-
 /* MIDDLEWARES*/
 app.use(
   session({

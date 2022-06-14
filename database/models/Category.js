@@ -20,6 +20,15 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     const Category = sequelize.define(alias, cols, config);
+    Category.associate= (models) => {
+        Category
+        .belongsToMany(models.Product, {
+            as: 'products',
+            through:'products_categories',
+            foreignKey: 'category_id',
+            otherKey:'product_id'
+        })
+    }
 
     return Category;
 };

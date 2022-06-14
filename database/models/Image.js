@@ -10,21 +10,21 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         big: {
-            type: DataTypes.DOUBLE,
+            type: DataTypes.STRING(100),
             allowNull: false
 
         },
         medium: {
-            type: DataTypes.DOUBLE,
+            type: DataTypes.STRING(100),
             allowNull: false
 
         },
         small1: {
-            type: DataTypes.DOUBLE,
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         small2: {
-            type: DataTypes.DOUBLE,
+            type: DataTypes.STRING(100),
             allowNull: false,
         }
     };
@@ -33,6 +33,12 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     const Image = sequelize.define(alias, cols, config);
+    Image.associate= (models) => {
+        Image.belongsTo(models.Product, {
+            as: 'products',
+            foreignKey: 'image_id' 
+        })
+    }
 
     return Image;
 };

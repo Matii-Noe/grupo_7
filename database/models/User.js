@@ -10,11 +10,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         firstName: {
-            type: DataTypes.STRING(30),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         lastName: {
-            type: DataTypes.STRING(50),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         email: {
@@ -22,15 +22,15 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         password: {
-            type: DataTypes.STRING(30),
+            type: DataTypes.STRING(255),
             allowNull: false,
         },
         userRole: {
-            type: DataTypes.STRING(30),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         avatar: {
-            type: DataTypes.BLOB,
+            type: DataTypes.STRING(100),
         }
     };
     let config = {
@@ -38,8 +38,12 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     const User = sequelize.define(alias, cols, config);
+    User.associate= (models) => {
+        User.belongsTo(models.Order, {
+            as: 'orders',
+            foreignKey: 'user_id' 
+        })
+    }
 
     return User;
 };
-
-/* QUE HACER CON LO DE ABAJO? Complementa el controlodar de user */

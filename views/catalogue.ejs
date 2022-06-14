@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', {title: 'Catalogue' }) %>
+</head>
+<body>
+    <header>
+        <%- include('partials/header') %> 
+    </header>
+
+    <main>
+        <h1>Listado de productos:</h1>
+
+        <br>
+
+        <ul>
+            <% for( let i = 0; i < products.length; i++ ) { %>
+            <li>
+                <a href="/products/<%= products[i].id %>"><%= products[i].productName %></a>
+            </li>
+            <% } %>
+            
+        </ul>
+        <br>
+
+    </main>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+</body>
+</html>

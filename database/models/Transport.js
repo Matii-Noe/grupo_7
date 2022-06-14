@@ -22,6 +22,12 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     const Transport = sequelize.define(alias, cols, config);
+    Transport.associate= (models) => {
+        Transport.belongsTo(models.Product, {
+            as: 'products',
+            foreignKey: 'transport_id' 
+        })
+    }
 
     return Transport;
 };

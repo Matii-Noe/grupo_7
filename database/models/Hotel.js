@@ -9,11 +9,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         hotelName: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false
         },
         roomType: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         nights: {
@@ -26,6 +26,13 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     const Hotel = sequelize.define(alias, cols, config);
+    Hotel.associate= (models) => {
+        Hotel.belongsTo(models.Product, {
+            as: 'products',
+            foreignKey: 'hotel_id' 
+        })
+    }
 
     return Hotel;
-}
+    
+    }

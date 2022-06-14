@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         ActivityName: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
     };
@@ -18,6 +18,14 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
     };
     const Activity = sequelize.define(alias, cols, config);
+    Activity.associate= (models) => {
+        Activity.belongsToMany(models.Product, {
+            as: 'products',
+            through:'products_activities',
+            foreignKey: 'activities_id',
+            otherKey:'product_id'
+        })
+    }
 
     return Activity;
 }
