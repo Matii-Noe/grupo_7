@@ -21,12 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     };
     const Category = sequelize.define(alias, cols, config);
     Category.associate= (models) => {
-        Category
-        .belongsToMany(models.Product, {
+        Category.hasMany(models.Product, {
             as: 'products',
-            through:'products_categories',
             foreignKey: 'category_id',
-            otherKey:'product_id'
         })
     }
 

@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     };
     const Hotel = sequelize.define(alias, cols, config);
     Hotel.associate= (models) => {
-        Hotel.belongsTo(models.Product, {
+        Hotel.hasMany(models.Product, {
             as: 'products',
             foreignKey: 'hotel_id' 
         })

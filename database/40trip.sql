@@ -157,14 +157,20 @@ CREATE TABLE `products` (
   `hotel_id` int(11) DEFAULT NULL,
   `image_id` int(11) DEFAULT NULL,
   `price` decimal(10,0) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `activity_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `products_FK` (`transport_id`),
   KEY `products_FK_1` (`hotel_id`),
   KEY `products_FK_2` (`image_id`),
+  KEY `products_FK_3` (`category_id`),
+  KEY `products_FK_4` (`activity_id`),
   CONSTRAINT `products_FK` FOREIGN KEY (`transport_id`) REFERENCES `transports` (`id`),
   CONSTRAINT `products_FK_1` FOREIGN KEY (`hotel_id`) REFERENCES `hotels` (`id`),
-  CONSTRAINT `products_FK_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+  CONSTRAINT `products_FK_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`),
+  CONSTRAINT `products_FK_3` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`),
+  CONSTRAINT `products_FK_4` FOREIGN KEY (`activity_id`) REFERENCES `activities` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,62 +179,8 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Buenos Aires','En este tour disfrutaremos de Buenos Aires con sus bares,\r\nlibrerías, teatros y hermosos parques.',1,1,1,37),(2,'Puerto Iguazú','En este tour disfrutaremos del Puerto Iguazu \r\nen una recorrida por las Ruinas de San Ignacio\r\n con Minas de Wanda.',2,2,2,34),(3,'Bariloche','Con este tour disfrutará de San Carlos de Bariloche, \r\nuno de los atractivos turísticos más importantes para \r\nlos amantes de la nieve, conocerá San Martín de los Andes \r\ny el lago Nahuel Huapi. Además, disfrutará del característico\r\n chocolate de la ciudad.',3,3,3,112),(4,'El Calafate','En este tour conocerá a la ciudad de Calafate, \r\ndesde donde recorrerá y contempla los increibles\r\n paisajes patagónicos, y los glaciares de la región.',1,4,4,83),(5,'El Chaltén','Este tour se ha creado específicamente para \r\ntodo aquel que quiera recorrer eficientemente \r\nla Capital Nacional del Trekking.',1,5,5,146),(6,'Ushuaia','En este tour visitará Ushuaia, recorrerá el canal Beagle,\r\n y conocerá el Glaciar Perito Moreno y el Parque \r\nNacional Tierra del Fuego.',2,6,6,64),(7,'Puerto Madryn',' Un viaje ideal para conocer uno de los más importantes destinos de naturaleza de Argentina',1,7,7,72),(8,'Torres del Paine',' Tour de primera clase visitando los principales \r\natractivos del Parque Nacional Torres del Paine.',1,8,8,113),(9,'Mendoza','En este maravilloso tour podrás disfrutar de la mejor \r\naventura en Argentina por La Cordillera de los Andes \r\nen Mendoza: tirolesa, rafting, cabalgata y más.\r\n',1,9,9,79),(10,'Salta','La escapada ideal para conocer una Argentina \r\nmucho más profunda. Pueblos originarios y \r\ncostumbres prehispánicas, paisajes de belleza \r\nimpactante y la oportunidad de disfrutar la \r\nexquisita cocina regional.',1,10,10,64),(11,'Esteros del Iberá','Escapada a Esteros del Iberá en Puerto Valle. \r\nFundado en 1868, Puerto Valle es un hotel boutique \r\ncon servicio de lujo, situado en una región tiene \r\nacceso exclusivo a los Esteros del Iberá en la \r\nLaguna Valle.',1,11,11,108);
+INSERT INTO `products` VALUES (1,'Buenos Aires','En este tour disfrutaremos de Buenos Aires con sus bares,\r\nlibrerías, teatros y hermosos parques.',1,1,1,37,1,1),(2,'Puerto Iguazú','En este tour disfrutaremos del Puerto Iguazu \r\nen una recorrida por las Ruinas de San Ignacio\r\n con Minas de Wanda.',2,2,2,34,1,4),(3,'Bariloche','Con este tour disfrutará de San Carlos de Bariloche, \r\nuno de los atractivos turísticos más importantes para \r\nlos amantes de la nieve, conocerá San Martín de los Andes \r\ny el lago Nahuel Huapi. Además, disfrutará del característico\r\n chocolate de la ciudad.',3,3,3,112,2,6),(4,'El Calafate','En este tour conocerá a la ciudad de Calafate, \r\ndesde donde recorrerá y contempla los increibles\r\n paisajes patagónicos, y los glaciares de la región.',1,4,4,83,2,7),(5,'El Chaltén','Este tour se ha creado específicamente para \r\ntodo aquel que quiera recorrer eficientemente \r\nla Capital Nacional del Trekking.',1,5,5,146,3,10),(6,'Ushuaia','En este tour visitará Ushuaia, recorrerá el canal Beagle,\r\n y conocerá el Glaciar Perito Moreno y el Parque \r\nNacional Tierra del Fuego.',2,6,6,64,3,13),(7,'Puerto Madryn',' Un viaje ideal para conocer uno de los más importantes destinos de naturaleza de Argentina',1,7,7,72,1,16),(8,'Torres del Paine',' Tour de primera clase visitando los principales \r\natractivos del Parque Nacional Torres del Paine.',1,8,8,113,1,20),(9,'Mendoza','En este maravilloso tour podrás disfrutar de la mejor \r\naventura en Argentina por La Cordillera de los Andes \r\nen Mendoza: tirolesa, rafting, cabalgata y más.\r\n',1,9,9,79,2,23),(10,'Salta','La escapada ideal para conocer una Argentina \r\nmucho más profunda. Pueblos originarios y \r\ncostumbres prehispánicas, paisajes de belleza \r\nimpactante y la oportunidad de disfrutar la \r\nexquisita cocina regional.',1,10,10,64,2,24),(11,'Esteros del Iberá','Escapada a Esteros del Iberá en Puerto Valle. \r\nFundado en 1868, Puerto Valle es un hotel boutique \r\ncon servicio de lujo, situado en una región tiene \r\nacceso exclusivo a los Esteros del Iberá en la \r\nLaguna Valle.',1,11,11,108,3,29);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `products_activities`
---
-
-DROP TABLE IF EXISTS `products_activities`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `products_activities` (
-  `product_id` int(11) DEFAULT NULL,
-  `activities_id` int(11) DEFAULT NULL,
-  KEY `products_activities_FK` (`product_id`),
-  KEY `products_activities_FK_1` (`activities_id`),
-  CONSTRAINT `products_activities_FK` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  CONSTRAINT `products_activities_FK_1` FOREIGN KEY (`activities_id`) REFERENCES `activities` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `products_activities`
---
-
-LOCK TABLES `products_activities` WRITE;
-/*!40000 ALTER TABLE `products_activities` DISABLE KEYS */;
-INSERT INTO `products_activities` VALUES (1,1),(1,2),(1,3),(2,4),(3,5),(3,6),(3,7),(4,8),(4,9),(5,10),(5,11),(5,12),(6,13),(6,14),(6,8),(7,15),(7,16),(7,17),(8,18),(8,19),(8,20),(9,21),(9,22),(9,23),(10,24),(10,25),(10,26),(11,27),(11,28),(11,29);
-/*!40000 ALTER TABLE `products_activities` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `products_categories`
---
-
-DROP TABLE IF EXISTS `products_categories`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `products_categories` (
-  `product_id` int(11) DEFAULT NULL,
-  `category_id` int(11) DEFAULT NULL,
-  KEY `products_categories_FK` (`product_id`),
-  KEY `products_categories_FK_1` (`category_id`),
-  CONSTRAINT `products_categories_FK` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  CONSTRAINT `products_categories_FK_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `products_categories`
---
-
-LOCK TABLES `products_categories` WRITE;
-/*!40000 ALTER TABLE `products_categories` DISABLE KEYS */;
-INSERT INTO `products_categories` VALUES (1,1),(2,1),(3,1),(4,1),(5,1),(6,1),(7,1),(8,1),(9,1),(10,1),(11,1),(1,2),(2,3),(3,3),(4,2),(5,2),(6,3),(7,2),(8,3),(9,3),(10,2),(11,2);
-/*!40000 ALTER TABLE `products_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -324,4 +276,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-09 12:12:59
+-- Dump completed on 2022-06-15 10:59:14

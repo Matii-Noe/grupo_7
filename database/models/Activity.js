@@ -19,11 +19,9 @@ module.exports = (sequelize, DataTypes) => {
     };
     const Activity = sequelize.define(alias, cols, config);
     Activity.associate= (models) => {
-        Activity.belongsToMany(models.Product, {
+        Activity.hasMany(models.Product, {
             as: 'products',
-            through:'products_activities',
-            foreignKey: 'activities_id',
-            otherKey:'product_id'
+            foreignKey: 'activity_id',
         })
     }
 
