@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: false,
         },
-        ActivityName: {
+        activityName: {
             type: DataTypes.STRING(100),
             allowNull: false,
         },

@@ -1,12 +1,7 @@
-/* const fs = require('fs');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
-
 const { validationResult } = require('express-validator');
 const path = require('path');
 const db = require('../database/models');
 const { Op } = require('sequelize');
-const Product = require('../database/models/Product');
 const Sequelize = db.sequelize;
 
 
@@ -22,14 +17,21 @@ const controller = {
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id, {
-			include: [{ model: Activity }, { model: Hotel },
-			{ model: Transport }, { model: Image }]
+            include: [
+				{association: 'activities'},
+                {association: 'images'},
+				{association: 'hotels'},
+				{association: 'transports'}
+            ]
 		})
-			.then(products => {
-				console.log(products);
-				res.render('productDetail.ejs', { products })
-			})
-			.catch(console.error);
+		.then(products => {
+			console.log('❤️❤️❤️❤️❤️')
+			console.log(products.images.big);
+			console.log('❤️❤️❤️❤️❤️')
+			res.render('productDetail.ejs', { products })
+
+		})
+		.catch(console.error);
 
 	},
 

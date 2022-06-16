@@ -17,15 +17,15 @@
         <section>
             <div class="conteiner">
                 <div class="column1">
-                    <img src="/images/ <%= products.image_id.bigImage %> " alt="">
+                    <img src="/images/<%= products.images.big %>" alt="">
                 </div>
                 <div class="column2">
                     <div class="row1">
-                        <img src="/images/<%= products.image_id.mediumImage%>" alt="">
+                        <img src="/images/<%= products.images.medium%>" alt="">
                     </div>
                     <div class="row2">
-                        <img src="/images/<%= products.image_id.littleImage1%>" alt="">
-                        <img src="/images/<%= products.image_id.litlleImage2%>" alt="">
+                        <img src="/images/<%= products.images.small1%>" alt="">
+                        <img src="/images/<%= products.images.small2%>" alt="">
                     </div>
                 </div>
             </div>
@@ -53,9 +53,9 @@
             <article class="box1">
                 <div class="input">
                     <p class="tittle"><i class="fa-solid fa-plane"></i>
-                        <%= products.transport_id.transportName %>
+                        <%= products.transports.transportName %>
                     </p>
-                    <p class="subtittle">| Operado por <%= products.transport_id.operatedBy %>
+                    <p class="subtittle">| Operado por <%= products.transports.operatedBy %>
                     </p>
                 </div>
                 <p class="top">Ida xx/xx</p>
@@ -66,27 +66,23 @@
                 <div class="input">
                     <p class="tittle"><i class="fa-solid fa-hotel"></i> Alojamiento</p>
                     <p class="subtittle">
-                        <%= products.hotel_id.nights %> noches
+                        <%= products.hotels.nights %> noches
                     </p>
                 </div>
                 <p class="top">
-                    <%= products.hotel_id.hotelName %>
+                    <%= products.hotels.hotelName %>
                 </p>
                 <a href="" class="button2">Ver alojamiento</a>
                 <p class="bottom light">
-                    <%= products.hotel_id.roomType %>
+                    <%= products.roomType %>
                 </p>
             </article>
             <article class="box1">
                 <p class="tittle"><i class="fa-regular fa-map"></i>Actividad</p>
                 <p class="top">
-                    <%=/*  products.activities.activityName  */%>
+                    <%=products.activities.activityName %>
                 </p>
-                <p class="top">
-                    <%= /* products.activities.activityName */ %>
-                </p>
-                <p class="top">
-                    <%= /* products.activities.activityName */ %>
+                
                 </p>
                 <a href="" class="button2">Ver actividad</a>
 
