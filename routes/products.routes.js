@@ -23,7 +23,7 @@ const productsController = require('../controllers/productsController');
 router.get('/catalogue', productsController.catalogue); 
 router.get('/:id', productsController.detail);
 
-/* router.get('/productCart', productsController.productCart); 
+router.get('/productCart', productsController.productCart); 
 
 router.get('/create', productsController.create);
 router.post('/' , upload.any(), productsController.processCreate)
@@ -33,9 +33,7 @@ router.get('/edit/:id', productsController.edit);
 router.patch('/edit/:id' , upload.any(), validateProduct , productsController.processEdit)
 
 
-
-
-router.delete('/delete/:id' , productsController.destroy); */
+router.delete('/delete/:id' , productsController.destroy); 
 
 
 module.exports = router;

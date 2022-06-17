@@ -101,11 +101,6 @@ header ul li a {
     display: none;
 }
 
-
-
-/*img {
-    width: 100%;
-}*/
 h3{
     font-size: 24px;
     margin-bottom: 20px;
@@ -120,6 +115,7 @@ p{
 main {
     width: 90%;
     margin: 0 auto;
+    display: flex;
 }
 section {
     margin-top: 20px;
@@ -129,14 +125,30 @@ section {
     display: flex;
 }
 
+main div h3 {
+    display: flex;
+}
+
+main div img {
+    width: 300px;
+    height: 200px;
+    display: flex;
+}
+
+main div {
+    display: flex;
+    width: 100%;
+    justify-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
 article {
-    width: 25%;
+    display: flex;
     padding : 10px 15px;
 }
 
-a {
-    position: relative
-}
 
 /* Banner el enemigo*/
 
@@ -150,6 +162,54 @@ section div div article div.banner {
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
+}
+
+footer div {
+    background-color: var(--azul-oscuro);
+}
+
+footer .footer1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--roboto);
+}
+
+footer div .logo-footer {
+    order: 1;
+    margin: 20px;
+}
+
+footer div .siguenos-en {
+    color: white;
+}
+
+footer div a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .der-reservados {
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+footer .footer2 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--roboto);
+}
+
+footer div .nav-bar {
+    margin: 10px;
+}
+
+footer div .nav-bar i {
+    color: white;
+    
+    margin-left: 1rem; 
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 /* MEDIA QUERIES */

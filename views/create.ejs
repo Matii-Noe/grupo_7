@@ -15,7 +15,7 @@
             <h2>Formulario de creación de productos</h2>
         </div>
         <div>
-            <form action="/create" method="POST" enctype="multipart/form-data">
+            <form action="/products" method="POST" enctype="multipart/form-data">
                 <div>
                     <div>
                         <label for="productName" class="form-label">Nombre del producto:</label>
@@ -63,34 +63,22 @@
                         <input type="text" id="roomType" name="roomType" class="form-input" required>
                     </div>
                     <div>
-                        <h4 class="form-input">Actividades:</h4>
+                        <h4 class="form-input">Actividad:</h4>
                         <div>
-                            <label for="activity1" class="form-label">Actividad 1:</label>
-                            <input type="text" id="activity1" name="activity1" class="form-input" required>
+                            <label for="activity1" class="form-label">Descripción de la actividad:</label>
+                            <input type="text" id="activityName" name="activityName" class="form-input" required>
                         </div>
-                        <div>
-                            <label for="activity2" class="form-label">Actividad 2(Opcional):</label>
-                            <input type="text" id="activity2" name="activity2" class="form-input">
-                        </div>
-                        <div>
-                            <label for="activity3" class="form-label">Actividad 3(Opcional):</label>
-                            <input type="text" id="activity3" name="activity3" class="form-input">
-                        </div>
+                            
                     </div>
                     <div>
                         <h4 class="form-input">Categorías:</h4>
-                            <label for="category"><input type="checkbox" name="category1" id="Destinos" value="Destinos">Destinos</label>
-                            <label for="category"><input type="checkbox" name="category2" id="Estilos" value="Estilos">Estilos de viaje</label>
-                            <label for="category"><input type="checkbox" name="category3" id="Familia" value="Familia">Viajes en familia</label>
-                            <label for="category"><input type="checkbox" name="category4" id="Gastronomico" value="Gastronomico">Viajes gastronómicos</label>
-                            <label for="category"><input type="checkbox" name="category5" id="Trekking" value="Trekking">Trekking y aventura</label>
-                            <label for="category"><input type="checkbox" name="category6" id="Escapadas" value="Escapadas">Escapadas</label>
-                            <label for="category"><input type="checkbox" name="category7" id="EnAuto" value="EnAuto">Viajes en auto</label>
-                            <label for="category"><input type="checkbox" name="category8" id="Romantico" value="Romantico">Escapadas románticas</label>
-                            <label for="category"><input type="checkbox" name="category9" id="Naturaleza" value="Naturaleza">Naturaleza y paisajes</label>
-                            <label for="category"><input type="checkbox" name="category10" id="Patrimonio" value="Patrimonio">Patrimonio y cultura</label>
-                            <label for="category"><input type="checkbox" name="category11" id="Lujos" value="Lujos">Viajes de lujo</label>
-						</select>
+                            <select name="category_id" id="category_id" required>
+                                <option value="" disabled selected>- Seleccionar categoria - </option>
+                                <% allCategories.forEach( category => { %>
+                                <option value="<%= category.id %>"><%= category.categoryName %></option>
+                                <% }); %>
+                            </select>
+        
                     </div>
                     <div>
                         <label for="price" class="form-label">Precio del producto:</label>
