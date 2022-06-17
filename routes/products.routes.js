@@ -20,13 +20,13 @@ var upload = multer({ storage: storage });
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
 
-router.get('/catalogue', productsController.catalogue); 
-router.get('/:id', productsController.detail);
+router.get('/create', productsController.create);
+router.post('/' , upload.any(), productsController.processCreate)
 
 router.get('/productCart', productsController.productCart); 
 
-router.get('/create', productsController.create);
-router.post('/' , upload.any(), productsController.processCreate)
+router.get('/catalogue', productsController.catalogue); 
+router.get('/:id', productsController.detail);
 
 //**********Editar producto**********
 router.get('/edit/:id', productsController.edit);

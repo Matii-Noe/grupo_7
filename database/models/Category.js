@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
 
         },
-        activityName: {
+        categoryName: {
             type: DataTypes.STRING(100),
             allowNull: false
-
+            
         },
     };
     let config = {
