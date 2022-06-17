@@ -66,8 +66,24 @@ const controller = {
 
 	edit: (req, res) => {
 		let id = req.params.id;
-		let product = products.find(product => product.id == id);
-		res.render('edit', { product });
+		let promProduct = db.Product.findByPk(id, {
+			include: [
+				{ association: 'activities' },
+				{ association: 'images' },
+				{ association: 'hotels' },
+				{ association: 'transports' },
+				{ association: 'categories' }
+			]
+		} );
+		let promActivity = db.Activity.findAll();
+		let promImage = db.Image.findAll();
+		let promHotel = db.Hotel.findAll();
+		let promTransport = db.Transport.findAll();
+		let promCategory = db.Category.findAll();
+
+		Promise.all([promProduct, promImage, promActivity, promHotel, promTransport, promCategory])
+		.then(([product, allCategories]) => res.render('edit.ejs', {product, allCategories}))
+		.catch(console.error);
 	},
 
 	processEdit: (req, res) => {
