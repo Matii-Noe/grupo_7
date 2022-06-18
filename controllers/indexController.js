@@ -4,7 +4,7 @@ const db = require('../database/models')
 
 const controller = {
 	index: (req, res) => {
-		db.Product.findAll({include: [{ association: 'images' }]})
+		db.Product.findAll()
 		.then(products => res.render('index.ejs', {products}))
 		;
 	},

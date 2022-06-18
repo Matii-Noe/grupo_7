@@ -17,64 +17,41 @@ const controller = {
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-		db.Product.findByPk(req.params.id, {
-			include: [
-				{ association: 'activities' },
-				{ association: 'images' },
-				{ association: 'hotels' },
-				{ association: 'transports' }
-			]
-		})
+		db.Product.findByPk(req.params.id)
 			.then(products => {
 				res.render('productDetail.ejs', { products })
 			})
 			.catch(console.error);
-
 	},
 
 	//Este método renderiza el form de creación de los productos
-	create: (req, res) => {
-		db.Category.findAll()
-		.then(allCategories => {
-			res.render('create.ejs', {allCategories})
-		})
-		.catch(console.error);
-	},
+	create: (req, res) => res.render('create.ejs'),
 
 	processCreate: (req, res) => {
 		db.Product.create({
 			productName: req.body.productName,
 			description: req.body.description,
-			image_id: req.body.bigImage,
-			image_id: req.body.mediumImage,
-			image_id: req.body.littleImage1,
-			image_id: req.body.littleImage2,
-			transport_id: req.body.transportName,
-			transport_id: req.body.operatedBy,
-			hotel_id: req.body.hotelName,
-			hotel_id: req.body.nights,
-			hotel_id: req.body.roomType,
-			activity_id: req.body.activityName,
-			category_id: req.body.category_id,
-			price: req.body.price
+			price: req.body.price,
+			activityName: req.body.activityName,
+			categoryName: req.body.categoryName,
+			operatedBy: req.body.operatedBy,
+			hotelName: req.body.hotelName,
+			roomType: req.body.roomType,
+			nights: req.body.nights,
+			bigImg: req.body.bigImg,
+			mediumImg: req.body.mediumImg,
+			little1Img: req.body.little1Img,
+			little2Img: req.body.little2Img
 		})
-		.then(product => {
-			res.render('index.ejs')
+		.then(products => {
+			res.render('index.ejs', {products})
 		})
 		.catch(console.error);
 	},
 
 	edit: (req, res) => {
 		let id = req.params.id;
-		let promProduct = db.Product.findByPk(id, {
-			include: [
-				{ association: 'activities' },
-				{ association: 'images' },
-				{ association: 'hotels' },
-				{ association: 'transports' },
-				{ association: 'categories' }
-			]
-		} );
+		let promProduct = db.Product.findByPk(id);
 		let promActivity = db.Activity.findAll();
 		let promImage = db.Image.findAll();
 		let promHotel = db.Hotel.findAll();

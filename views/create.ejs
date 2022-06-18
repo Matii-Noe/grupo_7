@@ -26,32 +26,25 @@
                         <textarea name="description" id="description" class="form-input" required></textarea>
                     </div>
                     <div>
-                        <label for="bigImage" class="form-label">Carga la imagen de tu producto(872x497):</label>
-                        <input type="file" name="bigImage" accept=".jpg" accept=".png" id="bigImage" class="form-input">
-                        <label for="mediumImage" class="form-label">Carga la imagen de tu producto(746x312):</label>
-                        <input type="file" name="mediumImage" accept=".jpg" accept=".png" id="mediumImage"
+                        <label for="bigImg" class="form-label">Carga la imagen de tu producto(872x497):</label>
+                        <input type="file" name="bigImg" accept=".jpg" accept=".png" id="bigImg" class="form-input">
+                        <label for="mediumImg" class="form-label">Carga la imagen de tu producto(746x312):</label>
+                        <input type="file" name="mediumImg" accept=".jpg" accept=".png" id="mediumImg"
                             class="form-input">
-                        <label for="littleImage1" class="form-label">Carga la imagen de tu producto(372x187):</label>
-                        <input type="file" name="littleImage1" accept=".jpg" accept=".png" id="littleImage1"
+                        <label for="little1Img" class="form-label">Carga la imagen de tu producto(372x187):</label>
+                        <input type="file" name="little1Img" accept=".jpg" accept=".png" id="little1Img"
                             class="form-input">
-                        <label for="littleImage2" class="form-label">Carga la imagen de tu producto(372x187):</label>
-                        <input type="file" name="littleImage2" accept=".jpg" accept=".png" id="littleImage2"
+                        <label for="little2Img" class="form-label">Carga la imagen de tu producto(372x187):</label>
+                        <input type="file" name="little2Img" accept=".jpg" accept=".png" id="little2Img"
                             class="form-input">
                     </div>
+                    
                     <div>
-                        <label for="transport" class="form-label">Transporte:</label>
-                        <select name="transportName" id="transportName" class="form-input">
-                            <option value="">Elegí</option>
-                            <option value="Vuelo">Vuelo</option>
-                            <option value="Bus">Bus</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="operatedBy" class="form-label">Operado por:</label>
+                        <label for="operatedBy" class="form-label">Vuelo operado por:</label>
                         <input type="text" id="operatedBy" name="operatedBy" class="form-input" required>
                     </div>
                     <div>
-                        <label for="hotel" class="form-label">Nombre del hotel:</label>
+                        <label for="hotelName" class="form-label">Nombre del hotel:</label>
                         <input type="text" id="hotelName" name="hotelName" class="form-input" required>
                     </div>
                     <div>
@@ -65,20 +58,19 @@
                     <div>
                         <h4 class="form-input">Actividad:</h4>
                         <div>
-                            <label for="activity1" class="form-label">Descripción de la actividad:</label>
+                            <label for="activityName" class="form-label">Descripción de la actividad:</label>
                             <input type="text" id="activityName" name="activityName" class="form-input" required>
                         </div>
-                            
+
                     </div>
                     <div>
                         <h4 class="form-input">Categorías:</h4>
-                            <select name="category_id" id="category_id" required>
-                                <option value="" disabled selected>- Seleccionar categoria - </option>
-                                <% allCategories.forEach( category => { %>
-                                <option value="<%= category.id %>"><%= category.categoryName %></option>
-                                <% }); %>
-                            </select>
-        
+                        <select name="categoryName" id="categoryName" class="form-input">
+                            <option value="destinos">Destinos</option>
+                            <option value="recomendados">Recomendados</option>
+                            <option value="estilos">Estilos de viaje</option>
+                        </select>
+
                     </div>
                     <div>
                         <label for="price" class="form-label">Precio del producto:</label>
