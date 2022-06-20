@@ -14,12 +14,16 @@
 
 <body>
 
-    <form action="/user/user-login" method="POST" id="form">
+    <form action="/users/login" method="POST" id="form">
         <div class="form">
             <h1>Accede a tu cuenta</h1>
             <div class="grupo">
-                <label for=""> Nombre de usuario</label>
+                <label for="firstName"> Nombre: </label>
                 <input type="text" name="firstName" id="firstName" required><span class="barra"></span>
+            </div>
+            <div class="grupo">
+                <label for="lastName"> Apellido: </label>
+                <input type="text" name="lastName" id="lastName" required><span class="barra"></span>
             </div>
             <div class="grupo">
                 <label for="email">Email</label>
@@ -37,20 +41,11 @@
             </div>
 
             <div class="recordame">
-            <label for="">Recordar mi usuario</label>
+                <label for="">Recordar mi usuario</label>
                 <input type="checkbox" name="remember_user">
             </div>
 
-
             <button type="submit"> Ingresar </button>
-
-            <h4>Ingresá con un sólo paso.</h4>
-
-            <div class="botones">
-                <button type="button"> <a href=""><i class="fa-brands fa-facebook"></i>Ingresar con
-                        Facebook</a></button>
-                <button type="button"> <a href=""><i class="fa-brands fa-google"></i>Ingresar con Google</a></button>
-                <button type="button"> <a href=""><i class="fa-brands fa-apple"></i>Ingresar con Apple</a></button>
 
     </form>
 

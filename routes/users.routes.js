@@ -25,23 +25,17 @@ var upload = multer({ storage: storage });
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
-const indexController = require('../controllers/indexController');
-const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
 
-//RUTAS ACCESIBLE POR CUALQUIERA
-router.get('/everyone', indexController.index);
 
 //RUTA ACCESIBLE SOLO SIN LOGIN
-router.get('/without-login', guestMiddleware, usersController.register);
-router.post('/without-login', upload.single('image'),validateRegister, usersController.processRegister); 
+router.get('/register', guestMiddleware, usersController.register);
+router.post('/register', upload.single('image'),/* validateRegister, */ usersController.processRegister); 
 
 //RUTA ACCESIBLE SOLO CON LOGIN
-router.get('/user-login', guestMiddleware, usersController.login)
-router.post('/user-login',
+router.get('/login', guestMiddleware, usersController.login)
+router.post('/login',
 usersController.loginProcess); 
-router.get('/profile',authMiddleware, usersController.profile);
+router.get('/profile/',authMiddleware, usersController.profile);
 router.get ('/logout', authMiddleware, usersController.logout)
-
-
 
 module.exports = router;

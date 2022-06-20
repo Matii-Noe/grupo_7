@@ -3,7 +3,7 @@
 
 <head>
     <%- include('partials/head', {title: 'Home' }) %>
-    <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
@@ -11,24 +11,28 @@
     <%- include('partials/header-navbar') %>
         <!-- /Header -->
         <main>
-            
+
             <div class="divContenedor">
+
                 <article>
                     <h3> Nuestros viajes </h3>
-                    
-                    <p>Estos son los destinos destacados en nuestras propuestas de viajes en Argentina y Chile. </p>
-                    
+
+                    <p>Estos son los destinos destacados en nuestras propuestas de viajes en Argentina y
+                        Chile. </p>
+
                 </article>
 
-                <% for( let i = 0; i < products.length; i++ ) { %>
+                <% for( let i=0; i < products.length; i++ ) { %>
                     <article>
-                    <a href="/products/<%= products[i].id %>"><%= products[i].productName %></a>
-                    <img src="/images/<%=products[i].bigImg %> " alt="Imagen">
+                        <a href="/products/<%= products[i].id %>">
+                            <%= products[i].productName %>
+                        </a>
+                        <img src="/images/<%=products[i].bigImg %> " alt="Imagen">
                     </article>
-                <% } %>
+                    <% } %>
 
             </div>
-            
+
         </main>
 
         <%- include('partials/footer') %>
