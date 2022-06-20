@@ -31,7 +31,7 @@
                     <br>
                     <div>
                         <label for="productName" class="form-label">Nombre del producto:</label>
-                        <input type="text" id="productName" name="productName" value="<%= product.productName %>" required>
+                        <input type="text" id="productName" name="productName" class="form-input" value="<%= product.productName %>" required>
                         <% if (locals.errors && errors.productName) { %> 
                             <div class="text-danger">
                                 <% errors.productName.msg %> 
@@ -49,36 +49,21 @@
                         <% } %>
                     </div>
                     <div>
-                        <label for="bigImage" class="form-label">Carga la imagen de tu producto(872x497):</label>
-                        <input type="file" name="bigImage" accept=".jpg" accept=".png" id="bigImage" class="form-input">
-                        <% if (locals.errors && errors.bigImage) { %> 
+                        <label for="bigImg" class="form-label">Carga la imagen de tu producto(872x497):</label>
+                        <input type="file" name="bigImg" accept=".jpg" accept=".png" id="bigImg" class="form-input">
+                        <% if (locals.errors && errors.bigImg) { %> 
                             <div class="text-danger">
-                                <% errors.bigImage.msg %> 
+                                <% errors.bigImg.msg %> 
                             </div>
                         <% } %>
-                        <label for="mediumImage" class="form-label">Carga la imagen de tu producto(746x312):</label>
-                        <input type="file" name="mediumImage" accept=".jpg" accept=".png" id="mediumImage" class="form-input">
-                        <label for="littleImage1" class="form-label">Carga la imagen de tu producto(372x187):</label>
-                        <input type="file" name="littleImage1" accept=".jpg" accept=".png" id="littleImage1" class="form-input">
-                        <label for="littleImage2" class="form-label">Carga la imagen de tu producto(372x187):</label>
-                        <input type="file" name="littleImage2" accept=".jpg" accept=".png" id="littleImage2" class="form-input">
+                        <label for="mediumImg" class="form-label">Carga la imagen de tu producto(746x312):</label>
+                        <input type="file" name="mediumImg" accept=".jpg" accept=".png" id="mediumImg" class="form-input">
+                        
                     </div>
-                    <div>
-                        <label for="transport" class="form-label">Transporte:</label>
-                        <select name="transport" id="transport" class="form-input">
-                            <option value="">Elegí</option>
-                            <option value="Vuelo">Vuelo</option>
-                            <option value="Bus">Bus</option>
-                        </select>
-                        <% if (locals.errors && errors.transport) { %> 
-                            <div class="text-danger">
-                                <% errors.transport.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
+                    
                     <div>
                         <label for="operatedBy" class="form-label">Operado por:</label>
-                        <input type="text" id="operatedBy" name="operatedBy" value="<%= product.transports.operatedBy %>" class="form-input" required>
+                        <input type="text" id="operatedBy" name="operatedBy" value="<%= product.operatedBy %>" class="form-input" required>
                         <% if (locals.errors && errors.operatedBy) { %> 
                             <div class="text-danger">
                                 <% errors.operatedBy.msg %> 
@@ -87,7 +72,7 @@
                     </div>
                     <div>
                         <label for="hotel" class="form-label">Nombre del hotel:</label>
-                        <input type="text" id="hotel" name="hotel" value="<%= product.hotels.hotelName %>" class="form-input" required>
+                        <input type="text" id="hotel" name="hotel" value="<%= product.hotelName %>" class="form-input" required>
                         <% if (locals.errors && errors.hotel) { %> 
                             <div class="text-danger">
                                 <% errors.hotel.msg %> 
@@ -96,7 +81,7 @@
                     </div>
                     <div>
                         <label for="nights" class="form-label">Cantidad de noches:</label>
-                        <input type="text" id="nights" name="nights" value="<%= product.hotels.nights %>" class="form-input" required>
+                        <input type="text" id="nights" name="nights" value="<%= product.nights %>" class="form-input" required>
                         <% if (locals.errors && errors.nights) { %> 
                             <div class="text-danger">
                                 <% errors.nightsmsg %> 
@@ -105,7 +90,7 @@
                     </div>
                     <div>
                         <label for="roomType" class="form-label">Tipo de habitación:</label>
-                        <input type="text" id="roomType" name="roomType" value="<%= product.hotels.roomType %>" class="form-input" required>
+                        <input type="text" id="roomType" name="roomType" value="<%= product.roomType %>" class="form-input" required>
                         <% if (locals.errors && errors.roomType) { %> 
                             <div class="text-danger">
                                 <% errors.roomType.msg %> 
@@ -115,22 +100,22 @@
                     <div>
                         <h4 class="form-input">Actividad:</h4>
                         <div>
-                            <label for="activity1" class="form-label">Descripción de la actividad:</label>
-                            <input type="text" id="activity1" name="activity1" value="<%= product.activities.activityName %>" class="form-input" required>
-                            <% if (locals.errors && errors.activity1) { %> 
+                            <label for="activityName" class="form-label">Descripción de la actividad:</label>
+                            <input type="text" id="activityName" name="activityName" value="<%= product.activityName %>" class="form-input" required>
+                            <% if (locals.errors && errors.activityName) { %> 
                                 <div class="text-danger">
-                                    <% errors.activity1.msg %> 
+                                    <% errors.activityName.msg %> 
                                 </div>
                             <% } %>
                         </div>
                     </div>
                     <div>
                         <h4 class="form-input">Categorías:</h4>
-                            <select name="category_id" id="category_id" required>
-                                <% allCategories.forEach( category => { %>
-                                <option value="<%= category.id %>"><% if (product.categories.id == category.id) { %><%= 'Elegido:' %><% }; %><%= product.categories.categoryName %></option>
-                                <% }); %>
-                            </select>
+                        <select name="categoryName" id="categoryName" class="form-input">
+                            <option value="destinos">Destinos</option>
+                            <option value="recomendados">Recomendados</option>
+                            <option value="estilos">Estilos de viaje</option>
+                        </select>
                     </div>
                     <div>
                         <label for="price" class="form-label">Precio del producto:</label>
@@ -153,8 +138,10 @@
             </div>
 
         </form>
-
-        <form action="/delete/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data"> <button class="borrar" type="reset"> Eliminar producto</button> </form>
+        <br>
+        <form action="/delete/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data"> 
+            <button class="borrar" type="reset" style="margin-bottom: 3rem;">Eliminar producto</button> 
+        </form>
 
 </body>
 </html>

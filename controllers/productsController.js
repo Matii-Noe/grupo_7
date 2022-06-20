@@ -38,46 +38,44 @@ const controller = {
 			hotelName: req.body.hotelName,
 			roomType: req.body.roomType,
 			nights: req.body.nights,
-			bigImg: req.body.bigImg,
-			mediumImg: req.body.mediumImg,
-			little1Img: req.body.little1Img,
-			little2Img: req.body.little2Img
+			bigImg: req.files[0].filename,
+			mediumImg: req.files[1].filename
 		})
 		.then(products => {
-			res.render('index.ejs', {products})
+			res.render('index', {products})
 		})
 		.catch(console.error);
 	},
 
 	edit: (req, res) => {
 		let id = req.params.id;
-		let promProduct = db.Product.findByPk(id);
-		let promActivity = db.Activity.findAll();
-		let promImage = db.Image.findAll();
-		let promHotel = db.Hotel.findAll();
-		let promTransport = db.Transport.findAll();
-		let promCategory = db.Category.findAll();
-
-		Promise.all([promProduct, promImage, promActivity, promHotel, promTransport, promCategory])
-		.then(([product, allCategories]) => res.render('edit.ejs', {product, allCategories}))
+		db.Product.findByPk(id)
+		.then(product => res.render('edit.ejs', {product}))
 		.catch(console.error);
 	},
 
 	processEdit: (req, res) => {
-		let id = req.params.id;
-		let prodEdit = products.find(product => product.id == id);
-		prodEdit = {
-			id: prodEdit.id,
-			images: {
-				bigImage: req.body.bigImage || prodEdit.images.bigImage,
-				mediumImage: req.body.mediumImage || prodEdit.images.mediumImage,
-				littleImage1: req.body.littleImage1 || prodEdit.images.littleImage1,
-				litlleImage2: req.body.litlleImage2 || prodEdit.images.litlleImage2
-			},
-			...req.body
-		};
+		db.Product.update({
+				productName: req.body.productName,
+				description: req.body.description,
+				price: req.body.price,
+				activityName: req.body.activityName,
+				categoryName: req.body.categoryName,
+				operatedBy: req.body.operatedBy,
+				hotelName: req.body.hotelName,
+				roomType: req.body.roomType,
+				nights: req.body.nights,
+				bigImg: req.files[0] != undefined ? req.files[0].filename : db.Product.bigImg,
+				mediumImg: req.files[1] != undefined ? req.files[1].filename : db.Product.mediumImg
+			}, 
+			{where: {id: req.params.id}})
+			.then( product => {
+				res.redirect('/')
+			})
+			.catch(console.error);
 
-		let resultValidation = validationResult(req);
+
+		/* let resultValidation = validationResult(req);
 		console.log(prodEdit);
 		if (resultValidation.errors.length > 0) {
 			console.log('Hay un error');
@@ -98,18 +96,27 @@ const controller = {
 				.then(function () {
 					res.redirect('/')
 				});
-		}
+		} */
 	},
 
 	productCart: (req, res) => {
 		res.render('productCart')
 	},
 
-	destroy: (req, res) => {
-		let id = req.params.id;
-		let borrar = products.filter(product => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(borrar, null, " "));
-		res.redirect('index');
+	delete: (req,res) => {
+		db.Product.findByPk(req.params.id)
+		.then( product => {
+			res.render('delete.ejs', {product})
+		})
+		.catch(console.error);
+	},
+
+	destroyProcess: (req, res) => {
+		db.Product.destroy({
+			where: {id: req.params.id}
+		})
+		.then( () => res.redirect('/') )
+		.catch(console.error);
 	} 
 
 };

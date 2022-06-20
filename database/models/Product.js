@@ -51,19 +51,20 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(100)
         },
 
-        small1Img: {
-            type: DataTypes.STRING(100)
-        },
+        created_at: {type: DataTypes.DATE},
 
-        small2Img: {
-            type: DataTypes.STRING(100)
-        }
+        updated_at: {type: DataTypes.DATE},
 
+        deleted_at: {type: DataTypes.DATE}
     }
 
     let config = {
         tableName: 'products',
-        timestamps: false
+        timestamps: true, 
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        paranoid: true,
+        deletedAt: 'deleted_at'
     }
 
     let Product = sequelize.define(alias, cols, config)
