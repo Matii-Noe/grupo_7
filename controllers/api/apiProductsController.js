@@ -6,6 +6,9 @@ module.exports = {
             attributes: ['id', 'productName', 'description', 'categoryName']
         })
         .then( products => {
+            for  (let i = 0;i<products.length;i++){
+                products[i].setDataValue("detail","http://localhost:3020/api/products/detail/" + products[i].id)
+            } 
             let respuesta = {
                 meta: {
                     status: 200,
@@ -35,7 +38,7 @@ module.exports = {
                 hotelName: product.hotelName,
                 roomType: product.roomType,
                 nights: product.nights,
-                bigImg: product.bigImg
+                bigImg: "http://localhost:3020/images/avatars/" + product.bigImg,
             };
             res.json(respuesta);
         })
