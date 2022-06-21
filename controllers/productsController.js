@@ -1,75 +1,131 @@
-const fs = require('fs');
+const { validationResult } = require('express-validator');
 const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require('../database/models');
+const { Op } = require('sequelize');
+const Sequelize = db.sequelize;
 
 const controller = {
 	//Este método lista todos los productos
 	catalogue: (req, res) => {
-		res.render('catalogue');
+		db.Product.findAll()
+		.then(products => {
+			res.render('catalogue.ejs', { products })
+		})
+		.catch(console.error);
 	},
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-	let id = req.params.id
-	let product = products.find(product => product.id == id)
-	res.render('productDetail', { product})
+		db.Product.findByPk(req.params.id)
+			.then(products => {
+				res.render('productDetail.ejs', { products })
+			})
+			.catch(console.error);
 	},
 
 	//Este método renderiza el form de creación de los productos
-	create: (req, res) => {
-		res.render('create');
-	},
+	create: (req, res) => res.render('create.ejs'),
 
 	processCreate: (req, res) => {
-		let newProd = {
-			id: products[products.length - 1].id + 1,
-			...req.body
-		};
+		const resultValidation = validationResult(req);
 
-		products.push(newProd);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		
-		res.redirect('index');
+		if (resultValidation.errors.length > 0) {
+			return res.render('create', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		} else {
+		db.Product.create({
+			productName: req.body.productName,
+			description: req.body.description,
+			price: req.body.price,
+			activityName: req.body.activityName,
+			categoryName: req.body.categoryName,
+			operatedBy: req.body.operatedBy,
+			hotelName: req.body.hotelName,
+			roomType: req.body.roomType,
+			nights: req.body.nights,
+			bigImg: req.files[0].filename,
+			mediumImg: req.files[1].filename
+		})
+		.then(products => {
+			res.render('index', {products})
+		})
+		.catch(console.error);
+	}
 	},
 
 	edit: (req, res) => {
-		let id = req.params.id ;
-		let product = products.find(product => product.id == id);
-		res.render('edit', {product});
+		let id = req.params.id;
+		db.Product.findByPk(id)
+		.then(product => res.render('edit.ejs', {product}))
+		.catch(console.error);
 	},
 
 	processEdit: (req, res) => {
-		let id = req.params.id ;
-		let prodEdit = products.find(product => product.id == id);
-		prodEdit = {
-			id: prodEdit.id ,
-			...req.body
-		};
+		db.Product.update({
+				productName: req.body.productName,
+				description: req.body.description,
+				price: req.body.price,
+				activityName: req.body.activityName,
+				categoryName: req.body.categoryName,
+				operatedBy: req.body.operatedBy,
+				hotelName: req.body.hotelName,
+				roomType: req.body.roomType,
+				nights: req.body.nights,
+				bigImg: req.files[0] != undefined ? req.files[0].filename : db.Product.bigImg,
+				mediumImg: req.files[1] != undefined ? req.files[1].filename : db.Product.mediumImg
+			}, 
+			{where: {id: req.params.id}})
+			.then( product => {
+				res.redirect('/')
+			})
+			.catch(console.error);
 
-		let newEdit = products.map(product => {
-			if (product.id == productToEdit.id) {
-				return product = { ...productToEdit };
-			}
-			return product;
-		})
-		fs.writeFileSync(productsFilePath, JSON.stringify(newEdit, null, " "));
-		res.redirect('index');
+
+		/* let resultValidation = validationResult(req);
+		console.log(prodEdit);
+		if (resultValidation.errors.length > 0) {
+			console.log('Hay un error');
+			console.log(resultValidation.errors);
+			return res.render('edit', {
+				errors: resultValidation.mapped(),
+				product: prodEdit
+			})
+		} else {
+			console.log('No hay error');
+			let newEdit = products.map(product => {
+				if (product.id == prodEdit.id) {
+					return product = { ...prodEdit };
+				}
+				return product;
+			})
+			fs.writeFileSync(productsFilePath, JSON.stringify(newEdit, null, " "))
+				.then(function () {
+					res.redirect('/')
+				});
+		} */
 	},
 
 	productCart: (req, res) => {
 		res.render('productCart')
 	},
 
-	destroy: (req, res) => {
-		let id = req.params.id;
-		let borrar = products.filter(product => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(borrar, null, " "));
-		res.redirect('index');
-	}
+	delete: (req,res) => {
+		db.Product.findByPk(req.params.id)
+		.then( product => {
+			res.render('delete.ejs', {product})
+		})
+		.catch(console.error);
+	},
+
+	destroyProcess: (req, res) => {
+		db.Product.destroy({
+			where: {id: req.params.id}
+		})
+		.then( () => res.redirect('/') )
+		.catch(console.error);
+	} 
 
 };
 

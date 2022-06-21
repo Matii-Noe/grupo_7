@@ -75,6 +75,11 @@ h2{
     font-size: 4rem;
 }
 
+form div .create-btn {
+    margin-bottom: 4rem;
+    padding: 0.5rem;
+}
+
 form{
     display: flex;
     justify-content: center;

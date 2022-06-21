@@ -1,4 +1,3 @@
-var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 var indexRouter = require("./routes/index.routes");
@@ -12,6 +11,7 @@ var app = express();
 var userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 /* MIDDLEWARES*/
+
 app.use(
   session({
     secret: "Esto es un secreto wow",
@@ -33,13 +33,8 @@ app.set("view engine", "ejs");
 
 /* RUTAS DE INDEX */
 app.use("/", indexRouter);
-app.use("/user", usersRouter);
+app.use("/users", usersRouter);
 app.use("/products", productsRouter);
-
-// catch 404 and forward to error handler
-/* app.use(function (req, res, next) {
-  next(createError(404));
-});  */
 
 // error handler
 app.use(function (err, req, res, next) {

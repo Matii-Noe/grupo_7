@@ -25,6 +25,21 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     const Order = sequelize.define(alias, cols, config);
+    Order.associate= (models) => {
+        Order.hasMany(models.User, {
+            as: 'users',
+            foreignKey: 'user_id' 
+        })
+    }
+
+    Order.associate= (models) => {
+        Order.belongsToMany(models.Product, {
+            as: 'products',
+            through:'products_orders',
+            foreignKey: 'product_id',
+            otherKey:'order_id'
+        })
+    }
 
     return Order;
 };

@@ -86,27 +86,22 @@ form .descripcion input {
     text-align: start;
 }
 
-button {
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    background-color: white;
-}
-
-button:hover {
-    background-color: var(--azul);
-    color: white;
-}
-
 .buttons {
     width: 100vw;
     text-align: center;
 }
 
-.guardar {
-width: 30vw;
-padding: 0.5rem 0rem;
-border-radius: 5px;
-text-align: center;
+form div button .guardar{
+    background-color: var(--azul-claro);
+    font-size: 2em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
 }
 
 .borrar {
@@ -115,6 +110,17 @@ text-align: center;
     border-radius: 5px;
     margin: 0 1rem 0 1rem;
     text-align: center;
+    }
+
+    button .guardar {
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        background-color: white;
+    }
+    
+    .guardar:hover {
+        background-color: var(--azul);
+        color: white;
     }
 
 @media (max-width: 1225px) {
