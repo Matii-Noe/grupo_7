@@ -1,6 +1,5 @@
 window.addEventListener('load', function () {
-    const firstNameField = document.querySelector('[name=firstname]');
-    const lastNameField = document.querySelector('[name=lastname]');
+
     const passwordField = document.querySelector('[name=password]');
     const emailField = document.querySelector('[name=email]')
     const form = document.querySelector('form')
@@ -8,7 +7,7 @@ window.addEventListener('load', function () {
     form.addEventListener('sumbit', e => {
         e.preventDefault()
     })
-    
+
     /* Validacion inputs vacios */
 
     const validateEmptyField = e => {
@@ -28,26 +27,6 @@ window.addEventListener('load', function () {
         }
     }
 
-
-    /* Validaciones para nombres */
-
-    const validateUserName = e => {
-        const field = e.target;
-        const fieldValue = e.target.value;
-
-        if (fieldValue.trim().length >= 2) {
-            field.classList.add('valid');
-        } else if (fieldValue.trim().length == 1) {
-            field.classList.remove('valid');
-            field.classList.add('invalid')
-            field.nextElementSibling.classList.add('error');
-            field.nextElementSibling.innerHTML = "Debe contener como minimo 2 caracteres"
-        } else {
-            field.classList.remove('valid');
-        }
-    }
-
-
     /* Validaciones para contraseña */
 
     const validatePassword = e => {
@@ -66,9 +45,6 @@ window.addEventListener('load', function () {
         }
     }
 
-
-
-
     /* Validaciones para email*/
 
     function validateEmail(email) {
@@ -80,13 +56,9 @@ window.addEventListener('load', function () {
         }
     }
 
-    firstNameField.addEventListener("blur", validateEmptyField)
-    lastNameField.addEventListener("blur", validateEmptyField)
     passwordField.addEventListener("blur", validateEmptyField)
     emailField.addEventListener("blur", validateEmptyField)
 
-    firstNameField.addEventListener('blur', validateUserName);
-    lastNameField.addEventListener('blur', validateUserName);
     passwordField.addEventListener('blur', validatePassword);
     emailField.addEventListener('blur', validateEmail);
 })
