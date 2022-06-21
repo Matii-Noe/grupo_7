@@ -19,17 +19,14 @@
             <h1>Accede a tu cuenta</h1>
             <div class="grupo">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required><span class="barra"></span>
-                <% if (locals.errors && errors.email) { %>
-                    <div class="text-danger">
-                        <%= errors.email.msg %>
-                    </div>
-                    <% } %>
+                <input type="email" name="email" id="email" ><span class="barra"></span>
+                <div class=' <%= locals.errors && errors.email? 'text-danger' : null  %> '><%= locals.errors && errors.email ? errors.email.msg : null %></div>
             </div>
 
             <div class="grupo">
                 <label for="password">Ingresá tu contraseña</label>
-                <input type="password" name="password" id="password" required><span class="barra"></span>
+                <input type="password" name="password" id="password" ><span class="barra"></span>
+                <div class=' <%= locals.errors && errors.password ? 'text-danger' : null  %> '><%= locals.errors && errors.password ? errors.password.msg : null %></div>
             </div>
 
             <div class="recordame">

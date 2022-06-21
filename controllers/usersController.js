@@ -79,7 +79,7 @@ const controller = {
 						return res.redirect('/users/profile');
 					}
 					return res.render('login', {errors: {
-						email: {msg: 'Las credenciales son inválidas.'}
+						password: {msg: 'La contraseña es inválida.'}
 					}});
 				};
 				return res.render('login', {errors: {

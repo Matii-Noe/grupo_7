@@ -43,7 +43,19 @@ div img {
 }
 
 /*Main*/
-/*COMPLETAR*/
+
+main {
+    height: 45vh;
+    margin-left: 2rem;
+    padding: 1rem;
+    font-family: var(--roboto);
+}
+
+main img {
+    margin: 1rem 0;
+    max-width: 150;
+    max-height: 150;
+}
 
 
 

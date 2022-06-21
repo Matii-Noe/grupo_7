@@ -3,16 +3,16 @@ const path = require('path');
 
 let validateProduct = [
     body('productName')
-        .notEmpty()
+        .notEmpty().withMessage('Debes completar este campo')
+        .bail()
         .isLength({ min: 3 })
-        .withMessage('Debe ingresar el nombre del producto')
-        .bail(),
+        .withMessage('Debe ingresar el nombre del producto'),
 
     body('description')
-        .notEmpty()
+        .notEmpty().withMessage('Debes completar este campo')
+        .bail()
         .isLength({ min: 10 })
-        .withMessage('Debe ingresar la descripción del producto(mínimo de 10 caracteres)')
-        .bail(),
+        .withMessage('Debe ingresar la descripción del producto(mínimo de 10 caracteres)'),
 
     body('bigImg')
         .custom((value, { req }) => {
