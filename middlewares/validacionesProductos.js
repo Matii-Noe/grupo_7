@@ -1,20 +1,24 @@
-const { check } = require("express-validator");
+const { check, body } = require("express-validator");
 const path = require('path');
 
 let validateProduct = [
-    check('productName')
+    body('productName')
         .notEmpty()
-        .isLength({min:3})
-        .withMessage('Debe ingresar el nombre del producto'),
-    check('description')
+        .isLength({ min: 3 })
+        .withMessage('Debe ingresar el nombre del producto')
+        .bail(),
+
+    body('description')
         .notEmpty()
-        .isLength({min:10})
-        .withMessage('Debe ingresar la descripción del producto(mínimo de 10 caracteres)'),
-    check('bigImage')
+        .isLength({ min: 10 })
+        .withMessage('Debe ingresar la descripción del producto(mínimo de 10 caracteres)')
+        .bail(),
+
+    body('bigImg')
         .custom((value, { req }) => {
             let file = req.file;
-            let acceptedExtensions = ['.jpg', '.png'];
-            
+            let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
+
             if (!file) {
                 throw new Error('Debe seleccionar una imagen')
             } else {
@@ -25,39 +29,42 @@ let validateProduct = [
             }
             return true
         }),
-    check('transport')
+
+    body('operatedBy')
         .notEmpty()
-        .withMessage('Debe seleccionar alguna forma de transporte'),
-    check('operatedBy')
+        .isLength({ min: 3 })
+        .withMessage('Debe ingresar la empresa encargada del transoprte')
+        .bail(),
+
+    body('hotelName')
         .notEmpty()
-        .isLength({min:3})
-        .withMessage('Debe ingresar la empresa encargada del transoprte'),
-    check('hotel')
-        .notEmpty()
-        .isLength({min:3})
-        .withMessage('Debe ingresar el nombre del hotel'),
-    check('nights')
+        .isLength({ min: 3 })
+        .withMessage('Debe ingresar el nombre del hotel')
+        .bail(),
+
+    body('nights')
         .notEmpty()
         .isNumeric()
-        .withMessage('Debe ingresar un número indicando la cantidad de noches'),
-    check('roomType')
+        .withMessage('Debe ingresar un número indicando la cantidad de noches')
+        .bail(),
+
+    body('roomType')
         .notEmpty()
-        .isLength({min:3})
-        .withMessage('Debe ingresar el tipo de habitación'),
-    check('activity1')
+        .isLength({ min: 3 })
+        .withMessage('Debe ingresar el tipo de habitación')
+        .bail(),
+
+    body('activityName')
         .notEmpty()
-        .isLength({min:3})
-        .withMessage('Debe ingresar el nombre de alguna actividad'),
-    check('activity2')
-        .isLength({min:3})
-        .withMessage('Debe ingresar al menos 3 caracteres'),
-    check('activity3')
-        .isLength({min:3})
-        .withMessage('Debe ingresar al menos 3 caracteres'),
-    check('price')
+        .isLength({ min: 3 })
+        .withMessage('Debe ingresar el nombre de alguna actividad')
+        .bail(),
+
+    body('price')
         .notEmpty()
         .isNumeric()
         .withMessage('Debe ingresar un valor numérico')
+        .bail(),
 ];
 
 module.exports = validateProduct;

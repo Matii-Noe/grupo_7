@@ -21,7 +21,7 @@ var upload = multer({ storage: storage });
 const productsController = require('../controllers/productsController');
 
 router.get('/create', productsController.create);
-router.post('/' , upload.any(), productsController.processCreate)
+router.post('/', upload.any(), validateProduct , productsController.processCreate)
 
 router.get('/productCart', productsController.productCart); 
 
@@ -30,7 +30,7 @@ router.get('/:id', productsController.detail);
 
 //**********Editar producto**********
 router.get('/edit/:id', productsController.edit);
-router.patch('/edit/:id' , upload.any(), validateProduct , productsController.processEdit)
+router.patch('/edit/:id' , upload.any(), validateProduct , productsController.processEdit);
 
 router.get('/delete/:id' , productsController.delete); 
 router.delete('/delete/:id' , productsController.destroyProcess); 

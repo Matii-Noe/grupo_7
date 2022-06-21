@@ -4,7 +4,6 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 const Sequelize = db.sequelize;
 
-
 const controller = {
 	//Este método lista todos los productos
 	catalogue: (req, res) => {
@@ -28,6 +27,14 @@ const controller = {
 	create: (req, res) => res.render('create.ejs'),
 
 	processCreate: (req, res) => {
+		const resultValidation = validationResult(req);
+
+		if (resultValidation.errors.length > 0) {
+			return res.render('create', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		} else {
 		db.Product.create({
 			productName: req.body.productName,
 			description: req.body.description,
@@ -45,6 +52,7 @@ const controller = {
 			res.render('index', {products})
 		})
 		.catch(console.error);
+	}
 	},
 
 	edit: (req, res) => {
