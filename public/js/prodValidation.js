@@ -2,7 +2,6 @@ window.addEventListener('load', function () {
     const productName = document.querySelector('#productname')
     const description = document.querySelector('#description');
     const bigImg = document.querySelector('#bigImg');
-    const mediumImg = document.querySelector('#mediumImg')
     const form = document.querySelector('form')
 
     form.addEventListener('sumbit', e => {

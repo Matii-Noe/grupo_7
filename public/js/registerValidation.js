@@ -1,8 +1,8 @@
 window.addEventListener('load', function () {
-    const firstNameField = document.querySelector('[name=firstname]');
-    const lastNameField = document.querySelector('[name=lastname]');
-    const passwordField = document.querySelector('[name=password]');
-    const emailField = document.querySelector('[name=email]')
+    const firstNameField = document.querySelector('#firstName');
+    const lastNameField = document.querySelector('#lastName');
+    const passwordField = document.querySelector('#password');
+    const emailField = document.querySelector('#email')
     const form = document.querySelector('form')
 
     form.addEventListener('sumbit', e => {
