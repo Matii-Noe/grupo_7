@@ -86,6 +86,11 @@ form .descripcion input {
     text-align: start;
 }
 
+form .text-danger {
+    color: red;
+    font-size: 12px;
+}
+
 .buttons {
     width: 100vw;
     text-align: center;

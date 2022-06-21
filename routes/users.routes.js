@@ -29,7 +29,7 @@ const usersController = require('../controllers/usersController');
 
 //RUTA ACCESIBLE SOLO SIN LOGIN
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', upload.single('image'),/* validateRegister, */ usersController.processRegister); 
+router.post('/register', upload.single('image'), validateRegister, usersController.processRegister); 
 
 //RUTA ACCESIBLE SOLO CON LOGIN
 router.get('/login', guestMiddleware, usersController.login)

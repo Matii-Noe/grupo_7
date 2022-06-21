@@ -7,7 +7,7 @@ window.addEventListener('load', function () {
     form.addEventListener('sumbit', e => {
         e.preventDefault()
     })
-    
+
     /* Validacion inputs vacios */
 
     const validateEmptyField = e => {
@@ -61,6 +61,23 @@ window.addEventListener('load', function () {
             field.classList.remove('valid');
         }
     }
+
+    var image = document.getElementById("bigImg").value;
+
+    var allowedExtensions = /(.jpg|.jpeg|.png)$/i;
+    if (!allowedExtensions.exec(image)) {
+        errbigImg.classList.remove("valid");
+        errbigImg.classList.add("invalid");
+        errbigImg.innerHTML =
+            "Sube un archivo con alguna de estas extencioes .jpeg/.jpg/.png";
+        bigImgInput.focus()
+        return;
+    } else {
+        errbigImg.classList.add("valid");
+        errbigImg.classList.remove("invalid");
+    }
+
+
     productName.addEventListener("blur", validateEmptyField);
     description.addEventListener("blur", validateEmptyField);
     bigImg.addEventListener("blur", validateEmptyField);

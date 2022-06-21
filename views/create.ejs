@@ -20,94 +20,62 @@
                     <div>
                         <label for="productName" class="form-label">Nombre del producto:</label>
                         <input type="text" id="productName" name="productName" class="form-input">
+                        <div class=' <%= locals.errors && errors.productName ? 'text-danger' : null  %> '><%= locals.errors && errors.productName ? errors.productName.msg : null %></div>
                     </div>
-                    <% if (locals.errors && errors.productName) { %> 
-                        <div class="text-danger">
-                            <% errors.productName.msg %> 
-                        </div>
-                    <% } %>
 
                     <div>
                         <label for="description" class="form-label">Descripción:</label>
-                        <textarea name="description" id="description" class="form-input" required></textarea>
+                        <textarea name="description" id="description" class="form-input" ></textarea>
+                        <div class=' <%= locals.errors && errors.description ? 'text-danger' : null  %> '><%= locals.errors && errors.description ? errors.description.msg : null %></div>
                     </div>
-                    <% if (locals.errors && errors.description) { %> 
-                        <div class="text-danger">
-                            <% errors.description.msg %> 
-                        </div>
-                    <% } %>
 
                     <div>
                         <label for="bigImg" class="form-label">Carga la imagen de tu producto(872x497):</label>
-                        <input type="file" name="bigImg" accept=".jpg" accept=".png" id="bigImg" class="form-input" required>
-                        <% if (locals.errors && errors.bigImg) { %> 
-                            <div class="text-danger">
-                                <% errors.productName.msg %> 
-                            </div>
-                        <% } %>
+                        <input type="file" name="bigImg" accept=".jpg" accept=".png" id="bigImg" class="form-input" >
+                        <div class=' <%= locals.errors && errors.bigImg ? 'text-danger' : null  %> '><%= locals.errors && errors.bigImg ? errors.bigImg.msg : null %></div>
 
                         <label for="mediumImg" class="form-label">Carga la imagen de tu producto(746x312):</label>
                         <input type="file" name="mediumImg" accept=".jpg" accept=".png" id="mediumImg"
-                            class="form-input" required>
-                            <% if (locals.errors && errors.mediumImg) { %> 
-                                <div class="text-danger">
-                                    <% errors.mediumImg.msg %> 
-                                </div>
-                            <% } %>
+                        class="form-input" >
                         
                     </div>
                     
                     <div>
                         <label for="operatedBy" class="form-label">Vuelo operado por:</label>
-                        <input type="text" id="operatedBy" name="operatedBy" class="form-input" required>
+                        <input type="text" id="operatedBy" name="operatedBy" class="form-input" >
+                        <div class=' <%= locals.errors && errors.operatedBy ? 'text-danger' : null  %> '><%= locals.errors && errors.operatedBy ? errors.operatedBy.msg : null %></div>
                     </div>
-                    <% if (locals.errors && errors.operatedBy) { %> 
-                        <div class="text-danger">
-                            <% errors.operatedBy.msg %> 
-                        </div>
-                    <% } %>
+                    
 
                     <div>
                         <label for="hotelName" class="form-label">Nombre del hotel:</label>
-                        <input type="text" id="hotelName" name="hotelName" class="form-input" required>
+                        <input type="text" id="hotelName" name="hotelName" class="form-input" >
+                        <div class=' <%= locals.errors && errors.hotelName ? 'text-danger' : null  %> '><%= locals.errors && errors.hotelName ? errors.hotelName.msg : null %></div>
                     </div>
-                    <% if (locals.errors && errors.hotelName) { %> 
-                        <div class="text-danger">
-                            <% errors.hotelName.msg %> 
-                        </div>
-                    <% } %>
+                    
 
                     <div>
                         <label for="nights" class="form-label">Cantidad de noches:</label>
-                        <input type="text" id="nights" name="nights" class="form-input" required>
+                        <input type="text" id="nights" name="nights" class="form-input" >
+                        <div class=' <%= locals.errors && errors.nights ? 'text-danger' : null  %> '><%= locals.errors && errors.nights ? errors.nights.msg : null %></div>
                     </div>
-                    <% if (locals.errors && errors.nights) { %> 
-                        <div class="text-danger">
-                            <% errors.nights.msg %> 
-                        </div>
-                    <% } %>
+                    
 
                     <div>
                         <label for="roomType" class="form-label">Tipo de habitación:</label>
-                        <input type="text" id="roomType" name="roomType" class="form-input" required>
+                        <input type="text" id="roomType" name="roomType" class="form-input" >
+                        <div class=' <%= locals.errors && errors.roomType ? 'text-danger' : null  %> '><%= locals.errors && errors.roomType ? errors.roomType.msg : null %></div>
                     </div>
-                    <% if (locals.errors && errors.roomType) { %> 
-                        <div class="text-danger">
-                            <% errors.roomType.msg %> 
-                        </div>
-                    <% } %>
+                    
 
                     <div>
                         <h4 class="form-input">Actividad:</h4>
                         <div>
                             <label for="activityName" class="form-label">Descripción de la actividad:</label>
-                            <input type="text" id="activityName" name="activityName" class="form-input" required>
+                            <input type="text" id="activityName" name="activityName" class="form-input" >
+                            <div class=' <%= locals.errors && errors.activityName ? 'text-danger' : null  %> '><%= locals.errors && errors.activityName ? errors.activityName.msg : null %></div>
                         </div>
-                        <% if (locals.errors && errors.activityName) { %> 
-                            <div class="text-danger">
-                                <% errors.activityName.msg %> 
-                            </div>
-                        <% } %>
+                        
 
                     </div>
                     <div>
@@ -117,22 +85,16 @@
                             <option value="recomendados">Recomendados</option>
                             <option value="estilos">Estilos de viaje</option>
                         </select>
-                        <% if (locals.errors && errors.categoryName) { %> 
-                            <div class="text-danger">
-                                <% errors.categoryName.msg %> 
-                            </div>
-                        <% } %>
 
                     </div>
+
                     <div>
                         <label for="price" class="form-label">Precio del producto:</label>
-                        <input type="text" id="price" name="price" class="form-input" required>
+                        <input type="text" id="price" name="price" class="form-input" >
+                        <div class=' <%= locals.errors && errors.price ? 'text-danger' : null  %> '><%= locals.errors && errors.price ? errors.price.msg : null %></div>
+
                     </div>
-                    <% if (locals.errors && errors.price) { %> 
-                        <div class="text-danger">
-                            <% errors.price.msg %> 
-                        </div>
-                    <% } %>
+                    
 
                     <div class="create-btn">
                         <button type="submit" class="createbutton">Crear producto</button>
@@ -142,6 +104,9 @@
             </form>
         </div>
     </main>
+
+    <script src="/public/js/prodValidation.js"></script>
+
 </body>
 
 </html>

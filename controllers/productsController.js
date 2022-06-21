@@ -28,12 +28,13 @@ const controller = {
 
 	processCreate: (req, res) => {
 		const resultValidation = validationResult(req);
-
+		
 		if (resultValidation.errors.length > 0) {
 			return res.render('create', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
+			
 		} else {
 		db.Product.create({
 			productName: req.body.productName,
@@ -46,10 +47,10 @@ const controller = {
 			roomType: req.body.roomType,
 			nights: req.body.nights,
 			bigImg: req.files[0].filename,
-			mediumImg: req.files[1].filename
+			mediumImg: req.files[1] ? req.files[1].filename : ''
 		})
 		.then(products => {
-			res.render('index', {products})
+			res.redirect('/products/catalogue')
 		})
 		.catch(console.error);
 	}
@@ -63,6 +64,16 @@ const controller = {
 	},
 
 	processEdit: (req, res) => {
+		const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0) {
+			console.log(resultValidation);
+			
+			return res.render('create', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		} else {
 		db.Product.update({
 				productName: req.body.productName,
 				description: req.body.description,
@@ -80,7 +91,8 @@ const controller = {
 			.then( product => {
 				res.redirect('/')
 			})
-			.catch(console.error);
+			.catch(console.error)
+		};
 
 
 		/* let resultValidation = validationResult(req);

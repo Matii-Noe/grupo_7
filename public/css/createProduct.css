@@ -87,13 +87,18 @@ form{
     font-family: Roboto;
 }
 
+form .text-danger {
+    color: red;
+    font-size: 12px;
+}
+
 .form-label {
     display: block;
     font-size: 1.6em;
     margin: 10px 0;
-  }
-  
-  .form-input {
+}
+
+.form-input {
     display: block;
     width: 100%;
     height: 45px;
@@ -117,3 +122,18 @@ form{
         border: none;
         width: 100%;
   }
+
+  .invalid {
+    border: solid 1px red;
+    box-shadow: 0 0 10px red
+}
+
+.error {
+    color: red;
+    display: block;
+}
+
+.valid {
+    border: solid 1px green;
+    box-shadow: 0 0 10px green
+}

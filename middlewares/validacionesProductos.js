@@ -16,55 +16,62 @@ let validateProduct = [
 
     body('bigImg')
         .custom((value, { req }) => {
-            let file = req.file;
+            let file = req.files[0];
+            console.log(file);
             let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
 
             if (!file) {
                 throw new Error('Debe seleccionar una imagen')
-            } else {
-                let fileExtensions = path.extname(file.originalName);
+            } else { 
+                let fileExtensions = path.extname(file.originalname);
                 if (!acceptedExtensions.includes(fileExtensions)) {
                     throw new Error(`Las extenciones de archivo permitidas son ${acceptedExtensions.join(',')}`)
                 }
             }
-            return true
-        }),
+            return true 
+        }), 
 
     body('operatedBy')
         .notEmpty()
+        .withMessage('Este campo no debe estar vacío')
+        .bail()
         .isLength({ min: 3 })
-        .withMessage('Debe ingresar la empresa encargada del transoprte')
-        .bail(),
+        .withMessage('Debe ingresar la empresa encargada del transoprte'),
 
     body('hotelName')
         .notEmpty()
+        .withMessage('Este campo no debe estar vacío')
+        .bail()
         .isLength({ min: 3 })
-        .withMessage('Debe ingresar el nombre del hotel')
-        .bail(),
+        .withMessage('Debe ingresar el nombre del hotel'),
 
     body('nights')
         .notEmpty()
+        .withMessage('Este campo no debe estar vacío')
+        .bail()
         .isNumeric()
-        .withMessage('Debe ingresar un número indicando la cantidad de noches')
-        .bail(),
+        .withMessage('Debe ingresar un número indicando la cantidad de noches'),
 
     body('roomType')
         .notEmpty()
+        .withMessage('Este campo no debe estar vacío')
+        .bail()
         .isLength({ min: 3 })
-        .withMessage('Debe ingresar el tipo de habitación')
-        .bail(),
+        .withMessage('Debe ingresar el tipo de habitación'),
 
     body('activityName')
         .notEmpty()
+        .withMessage('Este campo no debe estar vacío')
+        .bail()
         .isLength({ min: 3 })
-        .withMessage('Debe ingresar el nombre de alguna actividad')
-        .bail(),
+        .withMessage('Debe ingresar el nombre de alguna actividad'),
 
     body('price')
         .notEmpty()
+        .withMessage('Este campo no debe estar vacío')
+        .bail()
         .isNumeric()
-        .withMessage('Debe ingresar un valor numérico')
-        .bail(),
+        .withMessage('Debe ingresar un valor numérico'),
 ];
 
 module.exports = validateProduct;
