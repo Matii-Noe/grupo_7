@@ -28,6 +28,22 @@ window.addEventListener('load', function () {
         }
     }
 
+    /* VALIDACION DE GUIA */
+  /* var img1Input = document.getElementById("img1")
+  var img1 = document.getElementById("img1").value;
+  errImg1 = document.getElementById("errImg1");
+  var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+  if (!allowedExtensions.exec(img1)) {
+    errImg1.classList.add("show");
+    errImg1.classList.remove("hidden");
+    errImg1.innerHTML =
+      "Please upload file having extensions .jpeg/.jpg/.png/.gif only.";
+    img1Input.focus()
+    return;
+  } else {
+    errImg1.classList.remove("show");
+    errImg1.classList.add("hidden");
+  } */
 
     /* Validaciones para nombres */
 

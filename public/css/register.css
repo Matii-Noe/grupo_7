@@ -114,6 +114,11 @@ form .ingresar button {
     box-shadow: 0 0 10px red
 }
 
+form .text-danger {
+    color: red;
+    font-size: 12px;
+}
+
 .error {
     color: red;
     display: block;

@@ -1,4 +1,4 @@
-const fs = require('fs');
+const path = require('path')
 const {check} = require('express-validator');
 
 let validateRegister = [
@@ -16,8 +16,7 @@ let validateRegister = [
 
     check('password')
         .notEmpty().withMessage('Debes completar este campo')
-        .isLength({min: 8, max:20}).withMessage('Este campo debe tener entre 6 y 15 caracteres')
-        .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/, "i").withMessage('Debe contener hola'),
+        .isLength({min: 8, max:20}).withMessage('Este campo debe tener entre 6 y 15 caracteres'),
     
     check('avatar')
         .custom((value, { req }) => {
@@ -27,7 +26,7 @@ let validateRegister = [
             if (!file) {
                 throw new Error('Debe seleccionar una imagen')
             } else { 
-                let fileExtensions = path.extname(file.originalName);
+                let fileExtensions = path.extname(file.originalname);
                 if (!acceptedExtensions.includes(fileExtensions)) {
                     throw new Error(`Las extenciones de archivo permitidas son ${acceptedExtensions.join(',')}`)
                 }

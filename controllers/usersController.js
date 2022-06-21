@@ -1,9 +1,7 @@
 const bcrypt = require('bcryptjs');
-const path = require('path');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
-const { Op } = require('sequelize');
-const Sequelize = db.sequelize;
+
 
 const controller = {
 	register: (req, res) => {
@@ -12,8 +10,12 @@ const controller = {
 
 	processRegister: (req, res) => {
 		const resultValidation = validationResult(req);
-
+		
 		if (resultValidation.errors.length > 0) {
+			console.log('AAAA');
+			console.log(req.file);
+			console.log('AAAA');
+			
 			return res.render('register', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
