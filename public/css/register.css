@@ -108,3 +108,18 @@ form .ingresar button {
     font-size: 20px;
     background-color: #fff;
 }
+
+.invalid {
+    border: solid 1px red;
+    box-shadow: 0 0 10px red
+}
+
+.error {
+    color: red;
+    display: block;
+}
+
+.valid {
+    border: solid 1px green;
+    box-shadow: 0 0 10px green
+}

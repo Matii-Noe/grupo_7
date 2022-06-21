@@ -8,6 +8,7 @@ window.addEventListener('load', function () {
     form.addEventListener('sumbit', e => {
         e.preventDefault()
     })
+
     /* Validacion inputs vacios */
 
     const validateEmptyField = e => {
