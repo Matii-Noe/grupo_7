@@ -8,7 +8,9 @@ var logger = require("morgan");
 var methodOverride = require("method-override");
 var session = require("express-session");
 var app = express();
-var userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+var userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+var apiUsersRouter = require('./routes/api/apiUsers.routes');
+var apiProductsRouter = require('./routes/api/apiProducts.routes')
 
 /* MIDDLEWARES*/
 
@@ -35,6 +37,11 @@ app.set("view engine", "ejs");
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/products", productsRouter);
+
+//RUTAS DE APIs
+app.use('/api/users', apiUsersRouter);
+app.use('/api/products', apiProductsRouter);
+
 
 // error handler
 app.use(function (err, req, res, next) {
