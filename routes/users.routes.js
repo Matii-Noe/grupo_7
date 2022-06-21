@@ -6,7 +6,7 @@ const path = require('path');
 
 /*Middlewares*/
 
-const validateRegister = require('../middlewares/validacionesRegistro');
+const validateRegister = require('../middlewares/validateRegister');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
