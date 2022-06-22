@@ -3,12 +3,21 @@ const db = require('../../database/models');
 module.exports = {
     list: (req,res) => {
         db.Product.findAll({
-            attributes: ['id', 'productName', 'description', 'categoryName']
+            attributes: ['id', 'productName', 'description', 'categoryName', 'bigImg']
         })
         .then( products => {
             for  (let i = 0;i<products.length;i++){
                 products[i].setDataValue("detail","http://localhost:3007/api/products/detail/" + products[i].id)
             } 
+            for (let i = 0; i < products.length; i++) {
+                products[i].setDataValue(
+                'pathImg',
+                'http://localhost:3007/images/big-img/' +
+                    products[i].productName +
+                    '/' +
+                    products[i].bigImg,
+                )
+            }
             let respuesta = {
                 meta: {
                     status: 200,
@@ -38,7 +47,7 @@ module.exports = {
                 hotelName: product.hotelName,
                 roomType: product.roomType,
                 nights: product.nights,
-                bigImg: "http://localhost:3007/images/avatars/" + product.bigImg,
+                bigImg: "http://localhost:3007/images/big-img/" + product.bigImg,
             };
             res.json(respuesta);
         })
