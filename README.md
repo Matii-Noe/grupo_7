@@ -25,6 +25,10 @@ Mantovani, Antonella Abril. Residente de San Nicolas de los Arroyos.
 
 Boceto de las vistas, logo, colores y tipografía:https://www.figma.com/file/M3wwLx8g6PSwiZI3ULHZ8f/Wireframes?node-id=20%3A159
 
+## Dashboard
+
+https://github.com/Matii-Noe/Dashboard-G7
+
 ## Tecnologías utilizadas
 
 JS
