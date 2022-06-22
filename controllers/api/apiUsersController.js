@@ -7,7 +7,7 @@ module.exports = {
         })
         .then( users => {
             for  (let i = 0;i<users.length;i++){
-                users[i].setDataValue("detail","http://localhost:3020/api/users/profile/" + users[i].id)
+                users[i].setDataValue("detail","http://localhost:3007/api/users/profile/" + users[i].id)
             } 
             let respuesta = {
                 meta: {
@@ -32,7 +32,7 @@ module.exports = {
                 firstName: user.firstName,
                 lastName: user.lastName,
                 email: user.email,
-                avatar: "http://localhost:3020/images/avatars/" + user.avatar,
+                avatar: "http://localhost:3007/images/avatars/" + user.avatar,
             };
             res.json(respuesta);
         })
