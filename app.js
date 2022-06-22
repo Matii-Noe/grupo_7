@@ -7,11 +7,12 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var methodOverride = require("method-override");
 var session = require("express-session");
-var app = express();
 var userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 var apiUsersRouter = require('./routes/api/apiUsers.routes');
 var apiProductsRouter = require('./routes/api/apiProducts.routes')
+var cors = require('cors')
 
+var app = express();
 /* MIDDLEWARES*/
 
 app.use(
@@ -28,7 +29,7 @@ app.use(methodOverride("_method"));
 /* app.use(logger("dev"));
  */app.use(express.json());
 app.use(userLoggedMiddleware)
-
+app.use(cors())
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
