@@ -47,13 +47,21 @@ window.addEventListener('load', function () {
 
     /* Validaciones para email*/
 
-    function validateEmail(email) {
-        const field = email.target;
-        const fieldValue = email.target.value;
+    const validateEmail = e => {
+        const field = e.target;
+        const fieldValue = e.target.value
 
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(fieldValue)) {
-            field.classList.add('valid')
+        let regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        if (!regexEmail.test(emailField.value)) {
+            field.classList.add("invalid");
+            field.nextElementSibling.classList.add('error');
+            field.nextElementSibling.innerHTML = "El email no es válido";
+            field.classList.remove('valid');
+        } else {
+            field.classList.add('valid');
         }
+
     }
 
     passwordField.addEventListener("blur", validateEmptyField)
