@@ -50,6 +50,10 @@ main h1 {
     margin: 1rem 1rem;
 }
 
+main div section ul {
+        width: 60%;
+    }
+    
 main ul li {
     margin: 1rem 5rem;
 }
@@ -117,9 +121,7 @@ footer div .nav-bar i {
         font-size: 0.7rem;
     }
 
-    main div section ul {
-        width: 60%;
-    }
+    
 
 } 
 

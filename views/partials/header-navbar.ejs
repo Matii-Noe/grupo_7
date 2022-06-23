@@ -8,38 +8,33 @@
                 <p><i class="fa-solid fa-phone"></i> VENTAS: 0800-111-2345</p>
                 <p> Lunes a Viernes de 9 a 22. Sabados, Domingos y Feriados de 10 a 18H</p>
             </div>
-            <a href="/users/register"><i class="fa-regular fa-pen-to-square"></i> Registrar</a>
-            <% if (locals.isLogged) { %>
-                <a href="">
-                    <p>Hola! <%=/*  users.firstName  */%>
-
-                    </p>
-                </a>
-
-                <a href="/users/logout">
-                    Cerrar sesión
-                </a>
-                <% } else{ %>
-                    <a href="/users/login"><i class="fa-regular fa-user"></i> Ingresar</a>
-                    <% } %>
-
         </div>
+
         <nav>
             <ul>
                 <li>
-                    <a href="">Destinos <i class="fa-solid fa-angle-down"></i></a>
+                    <a href="/products/catalogue"> Catálogo </a>
                 </li>
                 <li>
-                    <a href="">Estilos de viaje <i class="fa-solid fa-angle-down"></i></a>
+                    <% if (locals.isLogged) { %>
+                        <a href="">
+                            <p>Hola! <%=  users.firstName  %>
+        
+                            </p>
+                        </a>
+        
+                        <a href="/users/logout">
+                            Cerrar sesión
+                        </a>
+                        <% } else{ %>
+                            <a href="/users/login"><i class="fa-regular fa-user"></i> Ingresar</a>
+                            <% } %>
                 </li>
 
                 <li>
-                    <a href="">Recomendados <i class="fa-solid fa-angle-down"></i></a>
+                    <a href="/users/register"><i class="fa-regular fa-pen-to-square"></i> Registrar</a>
                 </li>
 
-                <li>
-                    <a href="">Nosotros <i class="fa-solid fa-angle-down"></i></a>
-                </li>
             </ul>
         </nav>
     </div>
