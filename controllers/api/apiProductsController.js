@@ -3,7 +3,7 @@ const db = require('../../database/models');
 module.exports = {
     list: (req,res) => {
         db.Product.findAll({
-            attributes: ['id', 'productName', 'description', 'categoryName', 'bigImg']
+            attributes: ['id', 'productName', 'description', 'categoryName', 'bigImg', 'price']
         })
         .then( products => {
             for  (let i = 0;i<products.length;i++){
@@ -12,9 +12,7 @@ module.exports = {
             for (let i = 0; i < products.length; i++) {
                 products[i].setDataValue(
                 'pathImg',
-                'http://localhost:3007/images/big-img/' +
-                    products[i].productName +
-                    '/' +
+                'http://localhost:3007/images/' +
                     products[i].bigImg,
                 )
             }
