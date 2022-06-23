@@ -91,6 +91,13 @@ form .text-danger {
     font-size: 12px;
 }
 
+form div a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin: 2rem;
+}
+
 .buttons {
     width: 100vw;
     text-align: center;
