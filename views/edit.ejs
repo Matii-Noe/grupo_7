@@ -88,19 +88,18 @@
 
             </div>
 
+            <br>
 
-            <div class="buttons">
                 
-                <button class="guardar" type="submit"> Guardar cambios</button>
-                
+            <button class="guardar" type="submit"> Guardar cambios</button>
+            <br> <br>
+            <a class="menu-p" href="/products/delete/<%=product.id %> ">Eliminar producto</a>
+            <br> <br> <br>
 
-            </div>
 
         </form>
         <br>
-        <form action="/delete/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data"> 
-            <button class="borrar" type="reset" style="margin-bottom: 3rem;">Eliminar producto</button> 
-        </form>
+        
 
 </body>
 </html>
