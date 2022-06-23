@@ -16,18 +16,17 @@
 
                 <article>
                     <h3> Nuestros viajes </h3>
-
+                    
                     <p>Estos son los destinos destacados en nuestras propuestas de viajes en Argentina y
                         Chile. </p>
-
                 </article>
 
                 <% for( let i=0; i < products.length; i++ ) { %>
-                    <article>
+                    <article class="card-product">
                         <a href="/products/<%= products[i].id %>">
                             <%= products[i].productName %>
-                        </a>
                         <img src="/images/<%=products[i].bigImg %> " alt="Imagen">
+                        </a>
                     </article>
                     <% } %>
 

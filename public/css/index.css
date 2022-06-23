@@ -121,6 +121,14 @@ section {
     margin-top: 20px;
 }
 
+.card-product a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+}
+
 .divContenedor {
     display: flex;
 }
