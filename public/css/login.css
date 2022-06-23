@@ -39,6 +39,22 @@ form {
     width: 100%;
     margin: auto;
 }
+button:hover {
+    background-color: rgba(0, 24, 235, 0.652);
+    transition: 300ms;
+}
+
+form div a {
+    color: rgb(87, 87, 87);
+    padding: 0.8rem;
+    margin: 8rem;
+}
+
+a:hover {
+    color: rgba(0, 24, 235, 0.652);
+    transition: 300ms;
+}
+
 
 form .grupo {
     position: relative;
