@@ -26,7 +26,7 @@ form {
     background: #fff;
     padding: 40px;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    border-radius: 50px;
     font-family: 'Roboto';
 }
 
@@ -43,7 +43,7 @@ form {
 
 form .grupo {
     position: relative;
-    margin-top: 45px;
+    margin-top: 35px;
 }
 input {
     background: none;
