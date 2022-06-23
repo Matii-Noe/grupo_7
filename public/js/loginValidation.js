@@ -8,7 +8,9 @@ window.addEventListener('load', function () {
         e.preventDefault()
     })
 
+
     /* Validacion inputs vacios */
+
 
     const validateEmptyField = e => {
         const field = e.target;
@@ -27,7 +29,9 @@ window.addEventListener('load', function () {
         }
     }
 
+
     /* Validaciones para contraseña */
+
 
     const validatePassword = e => {
         const field = e.target;
@@ -45,7 +49,9 @@ window.addEventListener('load', function () {
         }
     }
 
+
     /* Validaciones para email*/
+
 
     const validateEmail = e => {
         const field = e.target;
