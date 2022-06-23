@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
         integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous" />
 
-     
 </head>
 
 <body>
@@ -49,10 +48,11 @@
             </div>
             <div class="grupo">
                 <label for="avatar" class="">Carga tu foto perfil</label>
-                <input type="file" name="avatar" id="image" class="">
+                <input type="file" name="avatar" id="image" class="image">
                 <div class=' <%= locals.errors && errors.avatar ? 'text-danger' : null  %> '><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></div>
             </div>
             <button type="submit"> Registrate</button>
+            <button type="submit"><a href="/">Menú Principal</a></button>
         </div>
         
     </form>

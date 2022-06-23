@@ -27,6 +27,7 @@ form {
     padding: 40px;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
     border-radius: 10px;
+    font-family: 'Roboto';
 }
 
 .form {
@@ -46,7 +47,7 @@ form .grupo {
 }
 input {
     background: none;
-    color: #c6c6c6;
+    color: #5e5e5e;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
@@ -56,24 +57,38 @@ input {
 }
 input:focus {
     outline: none;
-    color: #666;
+    color: rgb(0, 0, 0);
 }
 
 label {
     color: #666;
     font-size: 16px;
+    font-family: 'Roboto';
+}
 
+#userRole {
+    border-radius: 5px;
+    padding: 0.15rem;
 }
 
 button{
-    font-family: 'roboto';
+    font-family: 'Roboto';
     border: none;
+    font-weight: 600;
     border-radius: 20px;
     display: block;
     width: 80%;
     margin: 10px auto;
     color: rgb(87, 87, 87);
     height: 40px;
+}
+
+button:hover {
+    background-color: rgba(0, 24, 235, 0.652);
+}
+
+button a {
+    color: rgb(87, 87, 87);
 }
 
 p {
