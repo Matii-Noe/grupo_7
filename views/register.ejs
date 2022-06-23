@@ -18,23 +18,41 @@
         <div class="form">
             <h1>Crea tu cuenta</h1>
             <div class="grupo">
-                <input type="text" name="firstName" id="firstName" ><span class="barra"></span>
                 <label for="firstName"> Nombre</label>
+                <input type="text" name="firstName" id="firstName" ><span class="barra"></span>
+                
+               <!-- Errores -->
+
                 <div class=' <%= locals.errors && errors.firstName ? 'text-danger' : null  %> '><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></div>
+
             </div>
             <div class="grupo">
-                <input type="text" name="lastName" id="lastName" ><span class="barra"></span>
+
                 <label for="lastName"> Apellido</label>
+                <input type="text" name="lastName" id="lastName" ><span class="barra"></span>
+
+                <!-- Errores -->
+
                 <div class=' <%= locals.errors && errors.lastName ? 'text-danger' : null  %> '><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></div>
+
             </div>
             <div class="grupo">
-                <input type="email" name="email" id="email" ><span class="barra"></span>
+
                 <label for="email">Email</label>
+                <input type="email" name="email" id="email" ><span class="barra"></span>
+
+                <!-- Errores -->
+
                 <div class=' <%= locals.errors && errors.email ? 'text-danger' : null  %> '><%= locals.errors && errors.email ? errors.email.msg : null %></div>
+
             </div>
             <div class="grupo">
-                <input type="password" name="password" id="password" ><span class="barra"></span>
+
                 <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" ><span class="barra"></span>
+
+                <!-- Errores -->
+                
                 <div class=' <%= locals.errors && errors.password ? 'text-danger' : null  %> '><%= locals.errors && errors.password ? errors.password.msg : null %></div>
                 <br>
             </div>
@@ -49,6 +67,9 @@
             <div class="grupo">
                 <label for="avatar" class="">Carga tu foto perfil</label>
                 <input type="file" name="avatar" id="image" class="image">
+
+                <!-- Errores -->
+                
                 <div class=' <%= locals.errors && errors.avatar ? 'text-danger' : null  %> '><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></div>
             </div>
             <button type="submit"> Registrate</button>
