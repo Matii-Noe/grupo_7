@@ -63,6 +63,8 @@ header p{
     text-align: center;
     padding-right: 2rem;
     font-size: 1.2rem;
+    position: absolute;
+    right: 60px;
 }
 
 
@@ -84,6 +86,9 @@ header nav{
     flex-wrap: wrap;
     margin-left: 30%;
     padding-bottom: 4rem;
+    position: relative;
+    top: 150px;
+    right: 250px;
 }
 
 header ul li {
@@ -251,8 +256,13 @@ footer div .nav-bar i {
         display: none;
     }
     
-    article {
-        width: 100%;
+    main article a {
+        text-align: center;
+    }
+
+    main article a{
+        position: relative;
+        left: 30%;
     }
 
     section div div article div.banner {
@@ -285,5 +295,9 @@ footer div .nav-bar i {
         height: 34px;
         padding: 10px;
         font-size: 16px;
+    }
+
+    main article a{
+        position: static;
     }
 }
