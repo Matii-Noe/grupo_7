@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <%- include('partials/head', {title: 'Borrar producto' }) %>
+        <link rel="stylesheet" href="/css/delete.css">
     </head>
     
 <body>
@@ -11,7 +12,7 @@
 
     <main>
     
-        <h1>Estas seguro de querer borrar este producto: <%= product.productName %>???</h1>
+        <h1>¿Estas seguro de querer borrar este producto?: <%= product.productName %></h1>
         <p>
             <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                 <br>

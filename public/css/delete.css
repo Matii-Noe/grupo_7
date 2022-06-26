@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Color */
+    --azul: #0e3b43;
+    --celeste: #009fb7;
+    --rosado: #e4d6a7;
+    --grisclaro: #eaeaea;
+    /* Font family */
+    --inter:'Inter', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: var(--azul);
+    display: flex;
+    align-items: center;
+}
+
+header .logo-header {
+    margin: 20px;
+}
+
+header .menu-principal {
+    margin: 20px;
+    font-family: var(--roboto);
+}
+
+header nav {
+    position: absolute;
+    right: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+div img {
+    max-height: 5rem;
+    max-width: 10rem;
+}
+
+/* Main */
+main {
+    height: 54.2vh;
+}
+
+main h1 {
+    margin: 2rem;
+    text-align: center;
+}
+
+main p {
+    text-align: center;
+}
+
+main p a {
+    text-decoration: none;
+    padding: 6px;
+    background-color: rgb(177, 177, 177);
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: black;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+main p button {
+    background-color: rgb(177, 177, 177);
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 15px;
+    border: none;
+    margin-right: 2rem;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: rgba(0, 24, 235, 0.652);
+    transition: 300ms;
+}
+
+a:hover {
+    background-color: rgba(0, 24, 235, 0.652);
+    transition: 300ms;
+}
+
+/* Footer */
+
+footer div {
+    background-color: var(--azul);
+}
+
+footer .footer1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--roboto);
+}
+
+footer div .logo-footer {
+    order: 1;
+    margin: 20px;
+}
+
+footer div .siguenos-en {
+    color: white;
+}
+
+footer div a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .der-reservados {
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+footer .footer2 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--roboto);
+}
+
+footer div .nav-bar {
+    margin: 10px;
+}
+
+footer div .nav-bar i {
+    color: white;
+    
+    margin-left: 1rem; 
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 420px) {
+
+    main div section ul h3 {    
+    font-size: 15px;
+    }
+
+    main div section ul p {    
+        font-size: 14px;
+        }
+
+    footer .footer2 {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    main div section ul {
+        width: 60%;
+    }
+
+} 
+
+@media (max-width: 560px) {
+
+    footer .footer1 {
+        flex-direction: column-reverse;
+    }
+
+    footer .logo-footer{
+        align-self: end;
+    }
+
+} 
+
+
+    @media (max-width: 768px) {
+
+    }
+
+@media (min-width: 1200px) {
+    main div section .ul-fecha {
+        width: 20%;
+    }
+}

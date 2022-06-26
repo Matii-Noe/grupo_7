@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-:root{
+:root {
     /*colors*/
     --azul-oscuro: #0E3B43;
     --azul-claro: #009FB7;
@@ -24,127 +24,72 @@ html {
 
 /*Header*/
 
-header{
-    background-color: #0E3B43;
-}
-
-header .logo{
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 50%;
-}
-
-header div{
-    font-family: PT Sans Narrow;
-    color: var(--blanco);
-}
-
-.top-header{
+/* Header */
+header {
+    background-color:#0E3B43;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-header p{
-    font-weight: bold;
+header .logo-header {
+    margin: 20px;
 }
 
-.header-links{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 3rem;
+header .menu-principal {
+    margin: 8rem;
+    font-family:'Roboto';
+    font-size: 15px;
 }
 
-.contact{
-    text-align: center;
-    padding-right: 2rem;
-    font-size: 1.2rem;
-}
-
-
-header div a{
-    font-family: PT Sans Narrow;
-    font-weight: bold;
-    font-size: 2rem;
-    color: var(--blanco);
+header nav a {
+    color: white;
     text-decoration: none;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
-
-
-
-header nav{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-left: 30%;
-    padding-bottom: 4rem;
-}
-
-header ul li {
-    list-style: none;
-    display: inline-block;
-}
-
-header ul li a {
-    text-decoration: none;
-    color: var(--blanco);
-    font-family: PT Sans Narrow;
-    font-size: 2rem;
-    padding: 3rem;
+    position: absolute;
+    right: 60px;
 }
 
 
 /*main*/
 
-main div.container{
+/*main div.container{
     display: flex;
-    flex-direction: row;
     padding: 5px;
     margin-top: 20px;
     justify-content: center;
+}*/
+main div.conteiner {
+    background-color: #E4D6A7;
 }
-
-.container img{
+main div img {
+    margin-left: 40rem;
+}
+.container img {
     padding: 3px;
+    display: block;
 }
 
-.column1 img{
+.column1 img {
     width: 700px;
     height: 400px;
-    margin-top: 10rem;
-    margin-left: 11rem;
-    float: left;
+    margin-top: 5px;
+    text-align: center;
+
 }
 
-.column2 img{
-    float: right;
+.column2 img {
+    width: 700px;
+    height: 200px;
+    text-align: center;
+    margin-bottom: 4px;
 }
 
-.row1, .row2{
-   display: flex;
-}
 
-.row1 img{
-    height: 250px;
-    width:600px;
-    margin-top: 10rem;
-}
-
-.row2 img{
-    height: 150px;
-    width: 300px;
-}
-
-.button a{
+.button a {
     font-family: PT Sans Narrow;
     font-size: 2rem;
     color: var(--negro);
     text-decoration: none;
-    border:2px solid var(--champagne);
+    border: 2px solid var(--champagne);
     background-color: var(--champagne);
     border-radius: 30px;
     padding: 2px;
@@ -153,7 +98,13 @@ main div.container{
     bottom: 4rem;
 }
 
-h1{
+
+.productTitle {
+    display: block;
+    width: 100%;
+}
+
+h1 {
     font-family: Inter;
     font-weight: bold;
     font-size: 4rem;
@@ -162,9 +113,9 @@ h1{
     margin-left: 25rem;
 }
 
-h3{
+h3 {
     font-family: Inter;
-    font-weight:600;
+    font-weight: 600;
     font-size: 2rem;
     color: var(--azul-oscuro);
     margin-top: 5rem;
@@ -172,51 +123,51 @@ h3{
 }
 
 
-article{
+article {
     border: 3px solid var(--azul-claro);
     border-radius: 20px;
     width: 80rem;
     height: 10rem;
-    text-align:center;
+    text-align: center;
     margin-left: 20rem;
     margin-bottom: 5rem;
     padding: 5px;
 }
 
-a.button2{
+a.button2 {
     font-family: Roboto;
     font-size: 1.5rem;
     color: var(--azul-claro);
     text-decoration: none;
-    border:2px solid var(--azul-claro);
+    border: 1px solid var(--azul-claro);
     background-color: var(--champagne);
     border-radius: 30px;
     padding: 5px;
 }
 
-.input p{
+.input p {
     display: inline-block;
 }
 
-p.tittle{
- font-family: Roboto;
- font-size: 1.5rem;
- color: var(--negro);
- text-align: left;
- padding: .3rem;
+p.tittle {
+    font-family: Roboto;
+    font-size: 1.5rem;
+    color: var(--negro);
+    text-align: left;
+    padding: .3rem;
 }
 
-p.subtittle{
+p.subtittle {
     font-family: Roboto;
     font-weight: lighter;
     font-size: 1rem;
     color: var(--negro);
     text-align: left;
     padding-left: .6rem;
-    
+
 }
 
-.date{
+.date {
     font-family: Roboto;
     font-size: 1.4rem;
     color: var(--negro);
@@ -226,53 +177,54 @@ p.subtittle{
     gap: 4rem;
 }
 
-.date p{
-padding-top: 3rem;
-padding-bottom: 3rem;
-padding-right: 7rem;
+.date p {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-right: 7rem;
 }
 
-.box1{
-width: 50%;
-font-family: Roboto;
-font-size: 1.4rem;
-color: var(--negro);
+.box1 {
+    width: 50%;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    color: var(--negro);
 }
 
-.box1 .tittle, .box1 .subtittle{
+.box1 .tittle,
+.box1 .subtittle {
     float: left;
 }
 
-.box1 .subtittle{
+.box1 .subtittle {
     padding-top: 0.5rem;
 }
 
-.box1 .top{
+.box1 .top {
     display: flex;
     justify-content: flex-start;
     margin-top: 3rem;
     margin-left: 6rem;
 }
 
-.box1 .bottom{
+.box1 .bottom {
     display: flex;
     justify-content: flex-start;
     margin-top: 1rem;
     margin-left: 6rem;
 }
 
-.light{
+.light {
     font-family: Roboto;
     font-weight: lighter;
 }
 
-.box1 a{
-float: right;
-margin-bottom: 5rem;
+.box1 a {
+    float: right;
+    margin-bottom: 5rem;
 }
 
 
-.box2{
+.box2 {
     width: 30%;
     float: right;
     margin-right: 8rem;
@@ -284,16 +236,16 @@ margin-bottom: 5rem;
     flex-wrap: wrap;
 }
 
-.price{
-background-color: var(--azul-claro);
-font-family: Roboto;
-display: flex;
-gap: 20px;
-align-items: center;
-flex-wrap: wrap;
+.price {
+    background-color: var(--azul-claro);
+    font-family: Roboto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.product{
+.product {
     font-family: Roboto;
     font-weight: bold;
     font-size: 40px;
@@ -303,49 +255,49 @@ flex-wrap: wrap;
     margin-left: 25rem;
 }
 
-.vertical-line{
+.vertical-line {
     border-left: 1px solid var(--gris-claro);
     height: 10rem;
     left: 50%;
     position: absolute;
 }
 
-.description{
+.description {
     font-family: Roboto;
     color: #fff;
     margin-right: 15rem;
 }
 
-p.tittle1{
+p.tittle1 {
     font-size: 15px;
     text-align: center;
 }
 
-p.tittle2{
+p.tittle2 {
     font-size: 30px;
-    font-weight:bolder;
+    font-weight: bolder;
     text-align: center;
 }
 
-p.tittle3{
+p.tittle3 {
     font-size: 15px;
     font-weight: bold;
     text-align: center;
 }
 
-p.tittle4{
+p.tittle4 {
     font-size: 12px;
     font-weight: lighter;
     text-align: center;
 }
 
-.reserva a{
+.reserva a {
     font-family: Roboto;
     font-weight: bold;
     font-size: 2rem;
     color: var(--azul-claro);
     text-decoration: none;
-    border:2px solid var(--azul-claro);
+    border: 2px solid var(--azul-claro);
     background-color: var(--champagne);
     border-radius: 30px;
     padding: 5px;
@@ -353,12 +305,14 @@ p.tittle4{
 }
 
 /* Footer */
-footer{
+footer div {
     background-color: #0E3B43;
 }
 
-footer div {
-    background-color: var(--azul);
+footer ul li {
+    text-decoration: none;
+    color: var(--blanco);
+    list-style: none;
 }
 
 footer .footer1 {
@@ -379,6 +333,7 @@ footer div .siguenos-en {
 footer div a {
     text-decoration: none;
     color: white;
+    list-style: none;
 }
 
 footer .der-reservados {
@@ -389,7 +344,7 @@ footer .der-reservados {
 footer .footer2 {
     display: flex;
     justify-content: center;
-    font-family: var(--roboto);
+    font-family: 'Roboto';
 }
 
 footer div .nav-bar {
@@ -398,8 +353,8 @@ footer div .nav-bar {
 
 footer div .nav-bar i {
     color: white;
-    
-    margin-left: 1rem; 
+    text-decoration: none;
+    margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1.5rem;
     margin-top: 0.5rem;
