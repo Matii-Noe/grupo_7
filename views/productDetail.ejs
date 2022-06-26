@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <%- include('partials/header-navbar.ejs') %>
+        <%- include('partials/header.ejs') %>
     </header>
     <main>
         <section>
@@ -20,45 +20,24 @@
                     <img src="/images/<%=products.bigImg%>" alt="">
                 </div>
                 <div class="column2">
-                    <div class="row1">
-                        <img src="/images/<%= products.mediumImg%>" alt="">
-                    </div>
-                    
+                    <img src="/images/<%= products.mediumImg%>" alt="">
                 </div>
             </div>
-            <div class="button">
-                <a href="">Abrir galeria</a>
-            </div>
         </section>
-        <section>
+        <section class="productTitle">
             <h1>
                 <%= products.productName %>
             </h1>
-            <h3>Fechas y personas</h3>
-            <article class="input date">
-                <p><i class="fa-regular fa-calendar"></i> Desde xx/xx - Hasta xx/xx</p>
-                <p><i class="fa-regular fa-user"></i> Cantidad de personas</p>
-                <a href="" class="button2"><i class="fa-solid fa-pencil"></i> Modificar</a>
-            </article>
             <h3><i class="fa-solid fa-check"></i> Este paquete incluye</h3>
-            <div>
-                <article class="box2">
-                    <p class="tittle">Política de cambios y cancelaciones.</p>
-                    <a href="" class="button2">Ver condiciones</a>
-                </article>
-            </div>
-            <article class="box1">
+        </section>
+        <section  class="box1">
+            <article>
                 <div class="input">
-
                     <p class="tittle"><i class="fa-solid fa-plane"></i> Vuelo </p>
                     <p class="subtittle">| Operado por <%= products.operatedBy %></p>
-
                 </div>
-                <p class="top">Ida xx/xx</p>
-                <a href="" class="button2">Ver detalles</a>
-                <p class="bottom">Vuelta xx/xx</p>
             </article>
-            <article class="box1">
+            <article>
                 <div class="input">
                     <p class="tittle"><i class="fa-solid fa-hotel"></i> Alojamiento</p>
                     <p class="subtittle">
@@ -68,20 +47,16 @@
                 <p class="top">
                     <%= products.hotelName %>
                 </p>
-                <a href="" class="button2">Ver alojamiento</a>
                 <p class="bottom light">
                     <%= products.roomType %>
                 </p>
             </article>
-            <article class="box1">
+            <article>
                 <p class="tittle"><i class="fa-regular fa-map"></i>Actividad</p>
                 <p class="top">
                     <%=products.activityName %>
                 </p>
-                
                 </p>
-                <a href="" class="button2">Ver actividad</a>
-
             </article>
         </section>
         <section class="price">
@@ -93,9 +68,7 @@
             <div class="vertical-line"></div>
             <div class="description">
                 <p class="tittle1">Precio final por persona</p>
-                <p class="tittle2">$<%= products.price %>
-                </p>
-                <p class="tittle3">Final x personas $xx.xxx</p>
+                <p class="tittle2">$<%= products.price %></p>
                 <p class="tittle4">Incluye Imprto. PAIS y Percepción RG4815</p>
             </div>
             <div class="reserva">
