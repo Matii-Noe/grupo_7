@@ -28,7 +28,6 @@ html {
 header {
     background-color:#0E3B43;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -45,6 +44,8 @@ header .menu-principal {
 header nav a {
     color: white;
     text-decoration: none;
+    position: absolute;
+    right: 60px;
 }
 
 
