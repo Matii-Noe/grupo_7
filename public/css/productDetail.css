@@ -35,6 +35,10 @@ header .logo-header {
     margin: 20px;
 }
 
+.logo-header img {
+    max-width: 150px;
+}
+
 header .menu-principal {
     margin: 8rem;
     font-family:'Roboto';
@@ -328,6 +332,7 @@ footer .footer1 {
     display: flex;
     justify-content: space-between;
     font-family: 'Roboto';
+    font-size: 15px;
 }
 
 footer div .logo-footer {
@@ -350,10 +355,15 @@ footer .der-reservados {
     margin-bottom: 0.8rem;
 }
 
+footer div .logo-footer img {
+    max-width: 200px;
+}
+
 footer .footer2 {
     display: flex;
     justify-content: center;
     font-family: 'Roboto';
+    font-size: 15px;
 }
 
 footer div .nav-bar {
