@@ -32,6 +32,11 @@ header .menu-principal {
     font-family: var(--roboto);
 }
 
+header nav {
+    position: absolute;
+    right: 20px;
+}
+
 header nav a {
     color: white;
     text-decoration: none;
@@ -50,7 +55,7 @@ main .titulo {
 
 main div section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     font-family: var(--inter);
 }

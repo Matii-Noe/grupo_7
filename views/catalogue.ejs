@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('partials/head', {title: 'Catalogue' }) %>
-    <link rel="stylesheet" href="/css/catalogue.css">
+        <link rel="stylesheet" href="/css/catalogue.css">
 </head>
+
 <body>
     <header>
-        <%- include('partials/header') %> 
+        <%- include('partials/header') %>
     </header>
 
     <main>
@@ -15,12 +17,14 @@
         <br>
 
         <ul>
-            <% for( let i = 0; i < products.length; i++ ) { %>
-            <li>
-                <a href="/products/<%= products[i].id %>"><%= products[i].productName %></a>
-            </li>
-            <% } %>
-            
+            <% for( let i=0; i < products.length; i++ ) { %>
+                <li>
+                    <a href="/products/<%= products[i].id %>">
+                        <%= products[i].productName %>
+                    </a>
+                </li>
+                <% } %>
+
         </ul>
         <br>
 
@@ -31,4 +35,5 @@
     </footer>
 
 </body>
+
 </html>
