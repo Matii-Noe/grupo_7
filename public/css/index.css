@@ -48,6 +48,13 @@ header div{
     padding: 1rem;
 }
 
+.usuario-registrado {
+    position: absolute;
+    bottom: 10px;
+    right: 560px;
+    padding: 10px;
+}
+
 .top-header img {
     max-width: 200px;
 }
