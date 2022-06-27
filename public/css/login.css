@@ -40,7 +40,7 @@ form {
     margin: auto;
 }
 button:hover {
-    background-color: rgba(0, 24, 235, 0.652);
+    background-color: rgba(13, 53, 196, 0.922);
     transition: 300ms;
 }
 
@@ -88,11 +88,12 @@ form .text-danger {
 button{
     font-family: 'roboto';
     border: none;
+    font-weight: 600;
     border-radius: 20px;
     display: block;
     width: 80%;
     margin: 10px auto;
-    color: rgb(87, 87, 87);
+    color: rgb(15, 15, 15);
     height: 40px;
 }
 p {
@@ -103,11 +104,6 @@ p {
 }
 h3 {
     margin-top: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
 }
 
 form .botones button{
@@ -133,6 +129,17 @@ form .ingresar button {
     border: 1px solid #138f8d;
     font-size: 20px;
     background-color: #fff;
+}
+
+.recordame {
+    margin-left: 40px;
+}
+
+.main-menu {
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+    padding: 5px;
 }
 
 .invalid {

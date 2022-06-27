@@ -16,8 +16,8 @@
                 </li>
                 <li>
                     <% if (locals.isLogged) { %>
-                        <a href="">
-                            <p>Hola! <%=  users.firstName  %>
+                        <a href="/users/profile">
+                            <p>Hola! <%= locals.userLogged.firstName  %>
         
                             </p>
                         </a>

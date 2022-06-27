@@ -15,7 +15,7 @@ const validateEmptyField = e => {
         field.classList.add("invalid");
         field.nextElementSibling.classList.add('error');
         field.nextElementSibling.innerHTML =
-            `${field.name} esta vacio`;
+            "Campo vacio";
     } else {
         field.classList.remove("invalid");
         field.nextElementSibling.classList.remove('error');
