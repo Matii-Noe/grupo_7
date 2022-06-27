@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -31,6 +33,11 @@ header .menu-principal {
     font-family: var(--roboto);
 }
 
+header nav {
+    position: absolute;
+    right: 20px;
+}
+
 header nav a {
     color: white;
     text-decoration: none;
@@ -48,6 +55,7 @@ div img {
 main h1 {
     padding: 1rem;
     margin: 1rem 1rem;
+    font-family: 'PT Sans Narrow';
 }
 
 main div section ul {
@@ -56,6 +64,13 @@ main div section ul {
     
 main ul li {
     margin: 1rem 5rem;
+}
+
+main ul li a {
+    text-decoration: none;
+    font-family: 'PT Sans Narrow';
+    color:black;
+    font-size: 1.5rem;
 }
 
 footer div {

@@ -7,31 +7,34 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <%- include('partials/header-navbar') %>
-        <!-- /Header -->
-        <main>
+    <header>
+        <%- include('partials/header-navbar') %>
+    </header>
 
-            <h1> Nuestros viajes </h1>
-                    
-                    <p>Estos son los destinos destacados en nuestras propuestas de viajes en Argentina y Chile. </p>
+    <main>
 
-            <div class="divContenedor">
+        <h1> Nuestros viajes </h1>
 
-                <% for( let i=0; i < products.length; i++ ) { %>
-                    <article class="card-product">
-                        <a href="/products/<%= products[i].id %>">
-                            <%= products[i].productName %>
-                        <img src="/images/<%=products[i].bigImg %> " alt="Imagen">
-                        </a>
-                    </article>
-                    <% } %>
+        <p>Estos son los destinos destacados en nuestras propuestas de viajes en Argentina y Chile. </p>
 
-            </div>
+        <div class="divContenedor">
 
-        </main>
+            <% for( let i=0; i < products.length; i++ ) { %>
+                <article class="card-product">
+                    <a href="/products/<%= products[i].id %>">
+                        <%= products[i].productName %>
+                            <img src="/images/<%=products[i].bigImg %> " alt="Imagen">
+                    </a>
+                </article>
+                <% } %>
 
+        </div>
+
+    </main>
+
+    <footer>
         <%- include('partials/footer') %>
+    </footer>
 
 </body>
 

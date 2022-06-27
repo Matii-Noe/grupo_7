@@ -45,7 +45,11 @@ header div{
 .top-header{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.top-header img {
+    max-width: 200px;
 }
 
 header p{
@@ -63,6 +67,9 @@ header p{
     text-align: center;
     padding-right: 2rem;
     font-size: 1.2rem;
+    position: absolute;
+    right: 60px;
+    top: 15px;
 }
 
 
@@ -84,6 +91,9 @@ header nav{
     flex-wrap: wrap;
     margin-left: 30%;
     padding-bottom: 4rem;
+    position: relative;
+    top: 100px;
+    right: 180px;
 }
 
 header ul li {
@@ -191,12 +201,17 @@ footer div {
 footer .footer1 {
     display: flex;
     justify-content: space-between;
-    font-family: var(--roboto);
+    font-family: 'Roboto';
+    font-size: 15px;
 }
 
 footer div .logo-footer {
     order: 1;
     margin: 20px;
+}
+
+footer div .logo-footer img {
+    max-width: 200px;
 }
 
 footer div .siguenos-en {
@@ -211,12 +226,13 @@ footer div a {
 footer .der-reservados {
     color: white;
     margin-bottom: 0.8rem;
+    font-size: 15px;
 }
 
 footer .footer2 {
     display: flex;
     justify-content: center;
-    font-family: var(--roboto);
+    font-family: 'Roboto';
 }
 
 footer div .nav-bar {
@@ -231,6 +247,7 @@ footer div .nav-bar i {
     margin-bottom: 1.5rem;
     margin-top: 0.5rem;
 }
+
 
 /* MEDIA QUERIES */
 
@@ -251,8 +268,13 @@ footer div .nav-bar i {
         display: none;
     }
     
-    article {
-        width: 100%;
+    main article a {
+        text-align: center;
+    }
+
+    main article a{
+        position: relative;
+        left: 30%;
     }
 
     section div div article div.banner {
@@ -285,5 +307,9 @@ footer div .nav-bar i {
         height: 34px;
         padding: 10px;
         font-size: 16px;
+    }
+
+    main article a{
+        position: static;
     }
 }
