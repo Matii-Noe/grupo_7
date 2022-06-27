@@ -110,7 +110,16 @@ h1 {
     font-size: 4rem;
     color: var(--azul-oscuro);
     margin-top: 3rem;
-    margin-left: 25rem;
+    margin-left: 20rem;
+}
+
+h4 {
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: var(--azul-oscuro);
+    margin-top: 3rem;
+    margin-left: 20rem;
 }
 
 h3 {
@@ -311,14 +320,14 @@ footer div {
 
 footer ul li {
     text-decoration: none;
-    color: var(--blanco);
+    color:#EAEAEA;
     list-style: none;
 }
 
 footer .footer1 {
     display: flex;
     justify-content: space-between;
-    font-family: var(--roboto);
+    font-family: 'Roboto';
 }
 
 footer div .logo-footer {
